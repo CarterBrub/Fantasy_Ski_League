@@ -10,7 +10,8 @@ import streamlit_authenticator as stauth
 import requests
 from streamlit_lottie import st_lottie
 import json
-
+import pip
+pip.main(["install", "openpyxl"])
 
 from FIS_WEB_SCRAPE import Men_XC_Season_2022,\
     male_XC_athletes, male_XC_nationality, male_XC_points_2022,   \
