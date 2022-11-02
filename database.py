@@ -7,7 +7,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 
 load_dotenv(".env")
-DETA_KEY = os.getenv("DETA_KEY")
+DETA_KEY = "a039qfu6_Yus4BjzGWBVkbbou8cBffWR6bzLY6jdG"
 
 deta = Deta(DETA_KEY)
 
