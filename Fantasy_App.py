@@ -10,7 +10,7 @@ import streamlit_authenticator as stauth
 import requests
 from streamlit_lottie import st_lottie
 import json
-import pip
+
 
 from FIS_WEB_SCRAPE import Men_XC_Season_2022,\
     male_XC_athletes, male_XC_nationality, male_XC_points_2022,   \
@@ -23,7 +23,6 @@ from FIS_WEB_SCRAPE import Men_XC_Season_2022,\
 
 from Exel_Upload import df_Alex, df_Dad, df_Tate, df_Torje, df_Ronen, df_Fabian, df_Sander, df_Johannes, df_Magnus
 
-pip.main(["install", "openpyxl"])
 
 # ----------------Settings--------------------
 page_title = "Carter Brubaker's Fantasy Ski League"

@@ -1,7 +1,6 @@
 import pandas as pd
-import pip
 
-pip.main(["install", "openpyxl"])
+
 df_Alex = pd.read_excel(
     io='/Users/jillbrubaker/Desktop/Fantasy_League_Points.xlsx',
     engine='openpyxl',
