@@ -9,7 +9,6 @@ import database as db
 import streamlit_authenticator as stauth
 import requests
 from streamlit_lottie import st_lottie
-import numpy as np
 import json
 
 from FIS_WEB_SCRAPE import Men_XC_Season_2022,\
@@ -232,16 +231,14 @@ if authentication_status:
                         # ---------- SUBMISSION PERAMETERS ----------------------
                         if submitted and sum(team_total) > 50000:
                             submitted = False
-                            array_team = np.array(team_names)
-                            unique_names = np.unique(array_team)
+                            unique_names = pd.series(team_names).unique
                             if len(unique_names) != len(team_names):
                                 st.warning(f"Your team contains duplicate athletes and your sum is greater than 50,000 dollars. Your total is {sum(team_total)} dollars")
                             if len(unique_names) == len(team_names):
                                 st.warning(f"Your Team total is above 50,000 dollars. Your total is: {sum(team_total)} dollars")
 
                         if submitted and sum(team_total) <= 50000:
-                            array_team = np.array(team_names)
-                            unique_names = np.unique(array_team)
+                            unique_names = pd.series(team_names).unique
                             if len(unique_names) != len(team_names):
                                 submitted = False
                                 print(team_names)
@@ -318,8 +315,7 @@ if authentication_status:
 
                         if submitted and sum(team_total) > 50000:
                             submitted = False
-                            array_team = np.array(team_names)
-                            unique_names = np.unique(array_team)
+                            unique_names = pd.series(team_names).unique
                             if len(unique_names) != len(team_names):
                                 st.warning(
                                     f"Your team contains duplicate athletes and your sum is greater than 50,000 dollars. Your sum is: {sum(team_total)} dollars")
@@ -327,8 +323,7 @@ if authentication_status:
                                 st.warning(f"Your Team total is above 50,000 dollars. Your Total is: {sum(team_total)} dollars")
 
                         if submitted and sum(team_total) <= 50000:
-                            array_team = np.array(team_names)
-                            unique_names = np.unique(array_team)
+                            unique_names = pd.series(unique_names).unique
                             if len(unique_names) != len(team_names):
                                 submitted = False
                                 print(team_names)
@@ -404,8 +399,7 @@ if authentication_status:
                         submitted = st.form_submit_button("Save Team")
                         if submitted and sum(team_total) > 50000:
                             submitted = False
-                            array_team = np.array(team_names)
-                            unique_names = np.unique(array_team)
+                            unique_names = pd.series(team_names).unique
                             if len(unique_names) != len(team_names):
                                 st.warning(
                                     f"Your team contains duplicate athletes and your sum is greater than 50,000 dollars. Your total is: {sum(team_total)} dollars")
@@ -413,8 +407,7 @@ if authentication_status:
                                 st.warning(f"Your Team total is above 50,000 dollars. Your total is: {sum(team_total)} dollars")
 
                         if submitted and sum(team_total) <= 50000:
-                            array_team = np.array(team_names)
-                            unique_names = np.unique(array_team)
+                            unique_names = pd.series(team_names).unique
                             if len(unique_names) != len(team_names):
                                 submitted = False
                                 print(team_names)
@@ -488,8 +481,7 @@ if authentication_status:
                         submitted = st.form_submit_button("Save Team")
                         if submitted and sum(team_total) > 50000:
                             submitted = False
-                            array_team = np.array(team_names)
-                            unique_names = np.unique(array_team)
+                            unique_names = pd.series(team_names).unique
                             if len(unique_names) != len(team_names):
                                 st.warning(
                                     f"Your team contains duplicate athletes and your sum is greater than 50,000 dollars. Your total is: {sum(team_total)} dollars")
@@ -497,8 +489,7 @@ if authentication_status:
                                 st.warning(f"Your Team total is above 50,000 dollars. Your total is: {sum(team_total)} dollars.")
 
                         if submitted and sum(team_total) <= 50000:
-                            array_team = np.array(team_names)
-                            unique_names = np.unique(array_team)
+                            unique_names = pd.series(team_names).unique
                             if len(unique_names) != len(team_names):
                                 submitted = False
                                 print(team_names)
@@ -574,8 +565,7 @@ if authentication_status:
                         submitted = st.form_submit_button("Save Team")
                         if submitted and sum(team_total) > 50000:
                             submitted = False
-                            array_team = np.array(team_names)
-                            unique_names = np.unique(array_team)
+                            unique_names = pd.series(team_names).unique
                             if len(unique_names) != len(team_names):
                                 st.warning(
                                     f"Your team contains duplicate athletes and your sum is greater than 50,000 dollars. Your total is: {sum(team_total)} dollars")
@@ -583,8 +573,7 @@ if authentication_status:
                                 st.warning(f"Your Team total is above 50,000 dollars. Your total is: {sum(team_total)} dollars")
 
                         if submitted and sum(team_total) <= 50000:
-                            array_team = np.array(team_names)
-                            unique_names = np.unique(array_team)
+                            unique_names = pd.series(team_names).unique
                             if len(unique_names) != len(team_names):
                                 submitted = False
                                 print(team_names)
@@ -658,8 +647,7 @@ if authentication_status:
                         submitted = st.form_submit_button("Save Team")
                         if submitted and sum(team_total) > 50000:
                             submitted = False
-                            array_team = np.array(team_names)
-                            unique_names = np.unique(array_team)
+                            unique_names = pd.series(team_names).unique
                             if len(unique_names) != len(team_names):
                                 st.warning(
                                     f"Your team contains duplicate athletes and your sum is greater than 50,000 dollars. Your total is: {sum(team_total)} dollars")
@@ -667,8 +655,7 @@ if authentication_status:
                                 st.warning(f"Your Team total is above 50,000 dollars. Your total is: {sum(team_total)} dollars")
 
                         if submitted and sum(team_total) <= 50000:
-                            array_team = np.array(team_names)
-                            unique_names = np.unique(array_team)
+                            unique_names = pd.series(team_names).unique
                             if len(unique_names) != len(team_names):
                                 submitted = False
                                 print(team_names)
