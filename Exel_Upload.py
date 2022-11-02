@@ -1,5 +1,4 @@
 import pandas as pd
-import openpyxl
 import pip
 
 pip.main(["install", "openpyxl"])
@@ -85,6 +84,3 @@ df_Magnus = pd.read_excel(
     nrows=1
 )
 
-
-
-# /Users/jillbrubaker/Desktop/Fantasy_League_Points.xlsx'
