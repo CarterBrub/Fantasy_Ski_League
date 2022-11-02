@@ -1,0 +1,30 @@
+import os
+import ssl
+from deta import Deta # pip install deta
+from dotenv import load_dotenv # pip install python-env
+
+ssl._create_default_https_context = ssl._create_unverified_context
+
+
+load_dotenv(".env")
+DETA_KEY = os.getenv("DETA_KEY")
+
+deta = Deta(DETA_KEY)
+
+db = Deta.Base(deta, "Fantasy_League")
+
+
+def insert_period(submission_date, user, weekend, Team):
+    return db.put({"key": submission_date, "User": user, "Weekend": weekend, "Team": Team})
+
+
+def fetch_all_periods():
+    res = db.fetch()
+    return res.items
+
+
+def get_period(submission_date):
+    return db.get(submission_date)
+
+
+#EVERYTHING IS FUCKING WORKING LETS GOOOO YOU GOT THIS LAST BIT: User Authentification
