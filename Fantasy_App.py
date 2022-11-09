@@ -709,3 +709,20 @@ if authentication_status:
         st.subheader("Look at the athletes and their prices with the athletes tab, and then select your team by clicking "
                      "the team selection tab. To look at the FIS event schedule, check out Events. Enjoy!")
 
+    if selected == "Standings":
+        st.header("Standings World Cup 2022/23")
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.dataframe(df_Alex)
+            st.dataframe(df_Magnus)
+            st.dataframe(df_Dad)
+        with col2:
+            st.dataframe(df_Tate)
+            st.dataframe(df_Torje)
+            st.dataframe(df_Sander)
+        with col3:
+            st.dataframe(df_Ronen)
+            st.dataframe(df_Johannes)
+            st.dataframe(df_Fabian)
+
+
