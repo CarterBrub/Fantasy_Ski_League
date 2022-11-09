@@ -22,8 +22,6 @@ from FIS_WEB_SCRAPE import Men_XC_Season_2022,\
     Female_NoCo_Season_2022, price_women_NoCo, price_men_XC, price_women_XC, price_men_Hopp, price_women_Hopp, \
     price_men_NoCo, Female_NoCo_nationality, Female_NoCo_athletes
 
-from Exel_Upload import df_Alex, df_Dad, df_Tate, df_Torje, df_Ronen, df_Fabian, df_Sander, df_Johannes, df_Magnus
-
 pip.main(["install", "openpyxl"])
 # ----------------Settings--------------------
 page_title = "Carter Brubaker's Fantasy Ski League"
@@ -710,21 +708,4 @@ if authentication_status:
         st.header("Welcome to the Fantasy Ski League!")
         st.subheader("Look at the athletes and their prices with the athletes tab, and then select your team by clicking "
                      "the team selection tab. To look at the FIS event schedule, check out Events. Enjoy!")
-
-    if selected == "Standings":
-        st.header("Standings World Cup 2022/23")
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.dataframe(df_Alex)
-            st.dataframe(df_Magnus)
-            st.dataframe(df_Dad)
-        with col2:
-            st.dataframe(df_Tate)
-            st.dataframe(df_Torje)
-            st.dataframe(df_Sander)
-        with col3:
-            st.dataframe(df_Ronen)
-            st.dataframe(df_Johannes)
-            st.dataframe(df_Fabian)
-
 
