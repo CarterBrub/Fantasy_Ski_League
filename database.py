@@ -18,13 +18,10 @@ def insert_period(submission_date, user, weekend, Team):
     return db.put({"key": submission_date, "User": user, "Weekend": weekend, "Team": Team})
 
 
-def fetch_all_periods():
-    res = db.fetch()
+def fetch_all_periods(user):
+    res = db.fetch("key", "Weekend", "Team")
     return res.items
 
 
 def get_period(submission_date):
     return db.get(submission_date)
-
-
-#EVERYTHING IS FUCKING WORKING LETS GOOOO YOU GOT THIS LAST BIT: User Authentification
