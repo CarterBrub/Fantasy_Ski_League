@@ -712,18 +712,8 @@ if authentication_status:
 
     if selected == "Standings":
         st.header("Standings World Cup 2022/23")
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.dataframe(df_Alex)
-            st.dataframe(df_Magnus)
-            st.dataframe(df_Dad)
-        with col2:
-            st.dataframe(df_Tate)
-            st.dataframe(df_Torje)
-            st.dataframe(df_Sander)
-        with col3:
-            st.dataframe(df_Ronen)
-            st.dataframe(df_Johannes)
-            st.dataframe(df_Fabian)
+        info = {"name": ["Alex", "Tate", "Michael", "Mike", "Sander", "Fabian", "Johannes", "Ronen", "Magnus", "Torje"],
+                "points": ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]}
+        df = pd.DataFrame(info)
 
 
