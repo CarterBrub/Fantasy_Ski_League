@@ -701,8 +701,9 @@ if authentication_status:
     if selected == "My Team":
         st.header("My Teams")
         with st.form("My Teams"):
-            TEAMS = pd.DataFrame(db.fetch_all_periods())
-        st.dataframe(TEAMS)
+            ALLTEAMS = pd.DataFrame(db.fetch_all_periods())
+            MYTEAMS = ALLTEAMS.loc(ALLTEAMS['User'] == f"{name}")
+        st.dataframe(MYTEAMS)
 
     if selected == "Home":
         st.header("Welcome to the Fantasy Ski League!")
