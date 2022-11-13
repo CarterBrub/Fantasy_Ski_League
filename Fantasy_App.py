@@ -715,5 +715,7 @@ if authentication_status:
         info = {"name": ["Alex", "Tate", "Michael", "Mike", "Sander", "Fabian", "Johannes", "Ronen", "Magnus", "Torje"],
                 "points": ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]}
         df = pd.DataFrame(info)
+        st.dataframe(df)
+
 
 
