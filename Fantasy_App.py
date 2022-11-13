@@ -701,8 +701,8 @@ if authentication_status:
     if selected == "My Team":
         st.header("My Teams")
         with st.form("My Teams"):
-            ALLTEAMS = pd.DataFrame(db.fetch_all_periods())
-            MYTEAMS = ALLTEAMS.loc(ALLTEAMS['User'] == f"{name}")
+            df = pd.DataFrame(db.fetch_all_periods())
+            MYTEAMS = df.loc[df['User'] == f"{name}"]
         st.dataframe(MYTEAMS)
 
     if selected == "Home":
