@@ -19,7 +19,7 @@ def insert_period(submission_date, user, weekend, Team):
 
 
 def fetch_all_periods(user):
-    res = db.fetch(user)
+    res = db.get(user)
     return res.items(user)
 
 
