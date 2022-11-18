@@ -74,10 +74,10 @@ st.title(page_title + "  ")
 # ------------USER AUTHENTICATION---------------
 
 names = ["Michael Brubaker", "Carter Brubaker", "Tate Frantz", "Johannes Årdal", "Magnus Jetlund", "Sander Bakken",
-         "Fabian Østvold", "Alex Yigermal", "Ronen Woods", "Torje Seljeset"]
+         "Fabian Østvold", "Alex Yigermal", "Ronen Woods", "Torje Seljeset", "Robert"]
 
 usernames = ["mbrubaker", "cardiB", "Tatefirstplace", "Johannesburg", "TheJet", "Sandman", "Fab", "Jigs", "Woody",
-             "primal"]
+             "primal", "Robert"]
 
 file_path = Path(__file__).parent / "hashed_pw.pkl"
 with file_path.open("rb") as file:
@@ -712,7 +712,7 @@ if authentication_status:
 
     if selected == "Standings":
         st.header("Standings World Cup 2022/23")
-        info = {"name": ["Alex", "Tate", "Michael", "Mike", "Sander", "Fabian", "Johannes", "Ronen", "Magnus", "Torje"],
+        info = {"name": ["Alex", "Tate", "Michael", "Mike", "Sander", "Fabian", "Gunnar", "Ronen", "Magnus", "Torje"],
                 "points": ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]}
         df = pd.DataFrame(info)
         st.dataframe(df)
