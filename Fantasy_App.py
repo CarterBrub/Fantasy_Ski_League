@@ -52,12 +52,6 @@ weekends_Jumping_Women = {"Wisla": "4-6 Nov 2022", "Lillehammer": "2-4 Dec 2022"
                               "Zao": "12-15 Jan 2023", "Hinterzarten": "27-29 Jan 2023", "Willingen": "2-5 Feb 2023",
                               "Hinzenbach": "10-11 Feb 2023", "Rasnov": "17-19 Feb 2023", "Oslo": "10-12 Mar 2023",
                               "Lillehammer_2": "13-16 Mar 2023", "Vikersund": "17-19 Mar 2023", "Lahti": "23-26 Mar 2023"}
-athlete_plus_price_men_xc = {male_XC_athletes: price_men_XC}
-athlete_plus_price_women_xc = {female_XC_athletes: price_women_XC}
-athlete_plus_price_men_Hopp = {Male_Jump_athletes: price_men_Hopp}
-athlete_plus_price_women_Hopp = {Female_Jump_athletes: price_women_Hopp}
-athlete_plus_price_men_NoCo = {Male_NoCo_athletes: price_men_NoCo}
-athlete_plus_price_women_NoCo = {Female_NoCo_athletes: price_women_NoCo}
 date_time = datetime.now()
 st.session_state['time'] = date_time
 
