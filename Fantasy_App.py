@@ -177,7 +177,7 @@ if authentication_status:
                         team_total = []
                         team_names = []
                         "---"
-                        selection1 = st.selectbox("Select first member of team", male_XC_athletes)
+                        selection1 = st.selectbox("Select first member of team", male_XC_athletes, index = -1)
                         if selection1 != "None":
                             team_names.append(selection1)
                             index1 = male_XC_athletes.index(selection1)
