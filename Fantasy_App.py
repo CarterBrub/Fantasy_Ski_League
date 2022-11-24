@@ -177,49 +177,49 @@ if authentication_status:
                         team_total = []
                         team_names = []
                         "---"
-                        selection1 = st.selectbox("Select first member of team", male_XC_athletes)
+                        selection1 = st.selectbox("Select first member of team", male_XC_athletes, price_men_XC)
                         if selection1 != "None":
                             team_names.append(selection1)
                             index1 = male_XC_athletes.index(selection1)
                             team_total.append(int(price_men_XC[index1]))
 
-                        selection2 = st.selectbox("Select second member of your team", male_XC_athletes)
+                        selection2 = st.selectbox("Select second member of your team", male_XC_athletes,price_men_XC)
                         if selection2 != "None":
                             team_names.append(selection2)
                             index2 = male_XC_athletes.index(selection2)
                             team_total.append(int(price_men_XC[index2]))
 
-                        selection3 = st.selectbox("Select third member of your team", male_XC_athletes)
+                        selection3 = st.selectbox("Select third member of your team", male_XC_athletes,price_men_XC)
                         if selection3 != "None":
                             team_names.append(selection3)
                             index3 = male_XC_athletes.index(selection3)
                             team_total.append(int(price_men_XC[index3]))
 
-                        selection4 = st.selectbox("Select fourth member of your team", male_XC_athletes)
+                        selection4 = st.selectbox("Select fourth member of your team", male_XC_athletes,price_men_XC)
                         if selection4 != "None":
                             team_names.append(selection4)
                             index4 = male_XC_athletes.index(selection4)
                             team_total.append(int(price_men_XC[index4]))
 
-                        selection5 = st.selectbox("Select fifth member of your team", male_XC_athletes)
+                        selection5 = st.selectbox("Select fifth member of your team", male_XC_athletes,price_men_XC)
                         if selection5 != "None":
                             team_names.append(selection5)
                             index5 = male_XC_athletes.index(selection5)
                             team_total.append(int(price_men_XC[index5]))
 
-                        selection6 = st.selectbox("Select sixth member of your team", male_XC_athletes)
+                        selection6 = st.selectbox("Select sixth member of your team", male_XC_athletes,price_men_XC)
                         if selection6 != "None":
                             team_names.append(selection6)
                             index6 = male_XC_athletes.index(selection6)
                             team_total.append(int(price_men_XC[index6]))
 
-                        selection7 = st.selectbox("Select seventh member of your team", male_XC_athletes)
+                        selection7 = st.selectbox("Select seventh member of your team", male_XC_athletes,price_men_XC)
                         if selection7 != "None":
                             team_names.append(selection7)
                             index7 = male_XC_athletes.index(selection7)
                             team_total.append(int(price_men_XC[index7]))
 
-                        selection8 = st.selectbox("Select final member of your team", male_XC_athletes)
+                        selection8 = st.selectbox("Select final member of your team", male_XC_athletes, price_men_XC)
                         if selection8 != "None":
                             team_names.append(selection8)
                             index8 = male_XC_athletes.index(selection8)
@@ -260,53 +260,53 @@ if authentication_status:
                 if gender_selection == "Women":
                     st.header("Team Selection Women XC")
                     with st.form("entry_form", clear_on_submit=True):
-                        weekend_selection = st.selectbox("Select weekend", weekends_XC)
+                        weekend_selection = st.selectbox("Select weekend", weekends_XC, price_women_XC)
                         team_total = []
                         team_names = []
                         "---"
-                        selection1 = st.selectbox("Select first member of team", female_XC_athletes)
+                        selection1 = st.selectbox("Select first member of team", female_XC_athletes, price_women_XC)
                         if selection1 != "None":
                             team_names.append(selection1)
                             index1 = female_XC_athletes.index(selection1)
                             team_total.append(int(price_women_XC[index1]))
 
-                        selection2 = st.selectbox("Select second member of your team", female_XC_athletes)
+                        selection2 = st.selectbox("Select second member of your team", female_XC_athletes, price_women_XC)
                         if selection2 != "None":
                             team_names.append(selection2)
                             index2 = female_XC_athletes.index(selection2)
                             team_total.append(int(price_women_XC[index2]))
 
-                        selection3 = st.selectbox("Select third member of your team", female_XC_athletes)
+                        selection3 = st.selectbox("Select third member of your team", female_XC_athletes, price_women_XC)
                         if selection3 != "None":
                             team_names.append(selection3)
                             index3 = female_XC_athletes.index(selection3)
                             team_total.append(int(price_women_XC[index3]))
 
-                        selection4 = st.selectbox("Select fourth member of your team", female_XC_athletes)
+                        selection4 = st.selectbox("Select fourth member of your team", female_XC_athletes, price_women_XC)
                         if selection4 != "None":
                             team_names.append(selection4)
                             index4 = female_XC_athletes.index(selection4)
                             team_total.append(int(price_women_XC[index4]))
 
-                        selection5 = st.selectbox("Select fifth member of your team", female_XC_athletes)
+                        selection5 = st.selectbox("Select fifth member of your team", female_XC_athletes, price_women_XC)
                         if selection5 != "None":
                             team_names.append(selection5)
                             index5 = female_XC_athletes.index(selection5)
                             team_total.append(int(price_women_XC[index5]))
 
-                        selection6 = st.selectbox("Select sixth member of your team", female_XC_athletes)
+                        selection6 = st.selectbox("Select sixth member of your team", female_XC_athletes, price_women_XC)
                         if selection6 != "None":
                             team_names.append(selection6)
                             index6 = female_XC_athletes.index(selection6)
                             team_total.append(int(price_women_XC[index6]))
 
-                        selection7 = st.selectbox("Select seventh member of your team", female_XC_athletes)
+                        selection7 = st.selectbox("Select seventh member of your team", female_XC_athletes, price_women_XC)
                         if selection3 != "None":
                             team_names.append(selection7)
                             index7 = female_XC_athletes.index(selection7)
                             team_total.append(int(price_women_XC[index7]))
 
-                        selection8 = st.selectbox("Select final member of your team", female_XC_athletes)
+                        selection8 = st.selectbox("Select final member of your team", female_XC_athletes, price_women_XC)
                         if selection8 != "None":
                             team_names.append(selection8)
                             index8 = female_XC_athletes.index(selection8)
@@ -347,53 +347,53 @@ if authentication_status:
                 if gender_selection == "Men":
                     st.header("Team Selection Men's Jumping")
                     with st.form("entry_form", clear_on_submit=True):
-                        weekend_selection = st.selectbox("Select weekend", weekends_Jumping_Men)
+                        weekend_selection = st.selectbox("Select weekend", weekends_Jumping_Men, price_men_Hopp)
                         team_total = []
                         team_names = []
                         "---"
-                        selection1 = st.selectbox("Select first member of team", Male_Jump_athletes)
+                        selection1 = st.selectbox("Select first member of team", Male_Jump_athletes, price_men_Hopp)
                         if selection1 != "None":
                             team_names.append(selection1)
                             index1 = Male_Jump_athletes.index(selection1)
                             team_total.append(int(price_men_Hopp[index1]))
 
-                        selection2 = st.selectbox("Select second member of your team", Male_Jump_athletes)
+                        selection2 = st.selectbox("Select second member of your team", Male_Jump_athletes, price_men_Hopp)
                         if selection2 != "None":
                             team_names.append(selection2)
                             index2 = Male_Jump_athletes.index(selection2)
                             team_total.append(int(price_men_Hopp[index2]))
 
-                        selection3 = st.selectbox("Select third member of your team", Male_Jump_athletes)
+                        selection3 = st.selectbox("Select third member of your team", Male_Jump_athletes, price_men_Hopp)
                         if selection3 != "None":
                             team_names.append(selection3)
                             index3 = Male_Jump_athletes.index(selection3)
                             team_total.append(int(price_men_Hopp[index3]))
 
-                        selection4 = st.selectbox("Select fourth member of your team", Male_Jump_athletes)
+                        selection4 = st.selectbox("Select fourth member of your team", Male_Jump_athletes, price_men_Hopp)
                         if selection4 != "None":
                             team_names.append(selection4)
                             index4 = Male_Jump_athletes.index(selection4)
                             team_total.append(int(price_men_Hopp[index4]))
 
-                        selection5 = st.selectbox("Select fifth member of your team", Male_Jump_athletes)
+                        selection5 = st.selectbox("Select fifth member of your team", Male_Jump_athletes, price_men_Hopp)
                         if selection5 != "None":
                             team_names.append(selection5)
                             index5 = Male_Jump_athletes.index(selection5)
                             team_total.append(int(price_men_Hopp[index5]))
 
-                        selection6 = st.selectbox("Select sixth member of your team", Male_Jump_athletes)
+                        selection6 = st.selectbox("Select sixth member of your team", Male_Jump_athletes, price_men_Hopp)
                         if selection6 != "None":
                             team_names.append(selection6)
                             index6 = Male_Jump_athletes.index(selection6)
                             team_total.append(int(price_men_Hopp[index6]))
 
-                        selection7 = st.selectbox("Select seventh member of your team", Male_Jump_athletes)
+                        selection7 = st.selectbox("Select seventh member of your team", Male_Jump_athletes, price_men_Hopp)
                         if selection7 != "None":
                             team_names.append(selection7)
                             index7 = Male_Jump_athletes.index(selection7)
                             team_total.append(int(price_men_Hopp[index7]))
 
-                        selection8 = st.selectbox("Select final member of your team", Male_Jump_athletes)
+                        selection8 = st.selectbox("Select final member of your team", Male_Jump_athletes, price_men_Hopp)
                         if selection8 != "None":
                             team_names.append(selection8)
                             index8 = Male_Jump_athletes.index(selection8)
@@ -431,53 +431,53 @@ if authentication_status:
                 if gender_selection == "Women":
                     st.header("Team Selection Women's Jumping")
                     with st.form("entry_form", clear_on_submit=True):
-                        weekend_selection = st.selectbox("Select weekend", weekends_Jumping_Women)
+                        weekend_selection = st.selectbox("Select weekend", weekends_Jumping_Women, price_women_Hopp)
                         team_total = []
                         team_names = []
                         "---"
-                        selection1 = st.selectbox("Select first member of team", Female_Jump_athletes)
+                        selection1 = st.selectbox("Select first member of team", Female_Jump_athletes, price_women_Hopp)
                         if selection1 != "None":
                             team_names.append(selection1)
                             index1 = Female_Jump_athletes.index(selection1)
                             team_total.append(int(price_women_Hopp[index1]))
 
-                        selection2 = st.selectbox("Select second member of your team", Female_Jump_athletes)
+                        selection2 = st.selectbox("Select second member of your team", Female_Jump_athletes, price_women_Hopp)
                         if selection2 != "None":
                             team_names.append(selection2)
                             index2 = Female_Jump_athletes.index(selection2)
                             team_total.append(int(price_women_Hopp[index2]))
 
-                        selection3 = st.selectbox("Select third member of your team", Female_Jump_athletes)
+                        selection3 = st.selectbox("Select third member of your team", Female_Jump_athletes, price_women_Hopp)
                         if selection3 != "None":
                             team_names.append(selection3)
                             index3 = Female_Jump_athletes.index(selection3)
                             team_total.append(int(price_women_Hopp[index3]))
 
-                        selection4 = st.selectbox("Select fourth member of your team", Female_Jump_athletes)
+                        selection4 = st.selectbox("Select fourth member of your team", Female_Jump_athletes, price_women_Hopp)
                         if selection4 != "None":
                             team_names.append(selection4)
                             index4 = Female_Jump_athletes.index(selection4)
                             team_total.append(int(price_women_Hopp[index4]))
 
-                        selection5 = st.selectbox("Select fifth member of your team", Female_Jump_athletes)
+                        selection5 = st.selectbox("Select fifth member of your team", Female_Jump_athletes, price_women_Hopp)
                         if selection5 != "None":
                             team_names.append(selection5)
                             index5 = Female_Jump_athletes.index(selection5)
                             team_total.append(int(price_women_Hopp[index5]))
 
-                        selection6 = st.selectbox("Select sixth member of your team", Female_Jump_athletes)
+                        selection6 = st.selectbox("Select sixth member of your team", Female_Jump_athletes, price_women_Hopp)
                         if selection6 != "None":
                             team_names.append(selection6)
                             index6 = Female_Jump_athletes.index(selection6)
                             team_total.append(int(price_women_Hopp[index6]))
 
-                        selection7 = st.selectbox("Select seventh member of your team", Female_Jump_athletes)
+                        selection7 = st.selectbox("Select seventh member of your team", Female_Jump_athletes, price_women_Hopp)
                         if selection7 != "None":
                             team_names.append(selection7)
                             index7 = Female_Jump_athletes.index(selection7)
                             team_total.append(int(price_women_Hopp[index7]))
 
-                        selection8 = st.selectbox("Select final member of your team", Female_Jump_athletes)
+                        selection8 = st.selectbox("Select final member of your team", Female_Jump_athletes, price_women_Hopp)
                         if selection8 != "None":
                             team_names.append(selection8)
                             index8 = Female_Jump_athletes.index(selection8)
@@ -517,53 +517,53 @@ if authentication_status:
                 if gender_selection == "Men":
                     st.header("Team Selection Men Nordic Combined")
                     with st.form("entry_form", clear_on_submit=True):
-                        weekend_selection = st.selectbox("Select weekend", weekends_NoCo_Men)
+                        weekend_selection = st.selectbox("Select weekend", weekends_NoCo_Men, price_men_NoCo)
                         team_total = []
                         team_names = []
                         "---"
-                        selection1 = st.selectbox("Select first member of team", Male_NoCo_athletes)
+                        selection1 = st.selectbox("Select first member of team", Male_NoCo_athletes, price_men_NoCo)
                         if selection1 != "None":
                             team_names.append(selection1)
                             index1 = Male_NoCo_athletes.index(selection1)
                             team_total.append(int(price_men_NoCo[index1]))
 
-                        selection2 = st.selectbox("Select second member of your team", Male_NoCo_athletes)
+                        selection2 = st.selectbox("Select second member of your team", Male_NoCo_athletes, price_men_NoCo)
                         if selection2 != "None":
                             team_names.append(selection2)
                             index2 = Male_NoCo_athletes.index(selection2)
                             team_total.append(int(price_men_NoCo[index2]))
 
-                        selection3 = st.selectbox("Select third member of your team", Male_NoCo_athletes)
+                        selection3 = st.selectbox("Select third member of your team", Male_NoCo_athletes, price_men_NoCo)
                         if selection3 != "None":
                             team_names.append(selection3)
                             index3 = Male_NoCo_athletes.index(selection3)
                             team_total.append(int(price_men_NoCo[index3]))
 
-                        selection4 = st.selectbox("Select fourth member of your team", Male_NoCo_athletes)
+                        selection4 = st.selectbox("Select fourth member of your team", Male_NoCo_athletes, price_men_NoCo)
                         if selection4 != "None":
                             team_names.append(selection4)
                             index4 = Male_NoCo_athletes.index(selection4)
                             team_total.append(int(price_men_NoCo[index4]))
 
-                        selection5 = st.selectbox("Select fifth member of your team", Male_NoCo_athletes)
+                        selection5 = st.selectbox("Select fifth member of your team", Male_NoCo_athletes, price_men_NoCo)
                         if selection5 != "None":
                             team_names.append(selection5)
                             index5 = Male_NoCo_athletes.index(selection5)
                             team_total.append(int(price_men_NoCo[index5]))
 
-                        selection6 = st.selectbox("Select sixth member of your team", Male_NoCo_athletes)
+                        selection6 = st.selectbox("Select sixth member of your team", Male_NoCo_athletes, price_men_NoCo)
                         if selection6 != "None":
                             team_names.append(selection6)
                             index6 = Male_NoCo_athletes.index(selection6)
                             team_total.append(int(price_men_NoCo[index6]))
 
-                        selection7 = st.selectbox("Select seventh member of your team", Male_NoCo_athletes)
+                        selection7 = st.selectbox("Select seventh member of your team", Male_NoCo_athletes, price_men_NoCo)
                         if selection7 != "None":
                             team_names.append(selection7)
                             index7 = Male_NoCo_athletes.index(selection7)
                             team_total.append(int(price_men_NoCo[index7]))
 
-                        selection8 = st.selectbox("Select final member of your team", Male_NoCo_athletes)
+                        selection8 = st.selectbox("Select final member of your team", Male_NoCo_athletes, price_men_NoCo)
                         if selection8 != "None":
                             team_names.append(selection8)
                             index8 = Male_NoCo_athletes.index(selection8)
@@ -601,53 +601,53 @@ if authentication_status:
                 if gender_selection == "Women":
                     st.header("Team Selection Women NoCo")
                     with st.form("entry_form", clear_on_submit=True):
-                        weekend_selection = st.selectbox("Select weekend", weekends_NoCo_Women)
+                        weekend_selection = st.selectbox("Select weekend", weekends_NoCo_Women, price_women_NoCo)
                         team_total = []
                         team_names = []
                         "---"
-                        selection1 = st.selectbox("Select first member of team", Female_NoCo_athletes)
+                        selection1 = st.selectbox("Select first member of team", Female_NoCo_athletes, price_women_NoCo)
                         if selection1 != "None":
                             team_names.append(selection1)
                             index1 = Female_NoCo_athletes.index(selection1)
                             team_total.append(int(price_women_NoCo[index1]))
 
-                        selection2 = st.selectbox("Select second member of your team", Female_NoCo_athletes)
+                        selection2 = st.selectbox("Select second member of your team", Female_NoCo_athletes, price_women_NoCo)
                         if selection2 != "None":
                             team_names.append(selection2)
                             index2 = Female_NoCo_athletes.index(selection2)
                             team_total.append(int(price_women_NoCo[index2]))
 
-                        selection3 = st.selectbox("Select third member of your team", Female_NoCo_athletes)
+                        selection3 = st.selectbox("Select third member of your team", Female_NoCo_athletes, price_women_NoCo)
                         if selection3 != "None":
                             team_names.append(selection3)
                             index3 = Female_NoCo_athletes.index(selection3)
                             team_total.append(int(price_women_NoCo[index3]))
 
-                        selection4 = st.selectbox("Select fourth member of your team", Female_NoCo_athletes)
+                        selection4 = st.selectbox("Select fourth member of your team", Female_NoCo_athletes, price_women_NoCo)
                         if selection4 != "None":
                             team_names.append(selection4)
                             index4 = Female_NoCo_athletes.index(selection4)
                             team_total.append(int(price_women_NoCo[index4]))
 
-                        selection5 = st.selectbox("Select fifth member of your team", Female_NoCo_athletes)
+                        selection5 = st.selectbox("Select fifth member of your team", Female_NoCo_athletes, price_women_NoCo)
                         if selection5 != "None":
                             team_names.append(selection5)
                             index5 = Female_NoCo_athletes.index(selection5)
                             team_total.append(int(price_women_NoCo[index5]))
 
-                        selection6 = st.selectbox("Select sixth member of your team", Female_NoCo_athletes)
+                        selection6 = st.selectbox("Select sixth member of your team", Female_NoCo_athletes, price_women_NoCo)
                         if selection6 != "None":
                             team_names.append(selection6)
                             index6 = Female_NoCo_athletes.index(selection6)
                             team_total.append(int(price_women_NoCo[index6]))
 
-                        selection7 = st.selectbox("Select seventh member of your team", Female_NoCo_athletes)
+                        selection7 = st.selectbox("Select seventh member of your team", Female_NoCo_athletes, price_women_NoCo)
                         if selection7 != "None":
                             team_names.append(selection7)
                             index7 = Female_NoCo_athletes.index(selection7)
                             team_total.append(int(price_women_NoCo[index7]))
 
-                        selection8 = st.selectbox("Select final member of your team", Female_NoCo_athletes)
+                        selection8 = st.selectbox("Select final member of your team", Female_NoCo_athletes, price_women_NoCo)
                         if selection8 != "None":
                             team_names.append(selection8)
                             index8 = Female_NoCo_athletes.index(selection8)
