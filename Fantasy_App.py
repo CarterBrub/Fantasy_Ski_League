@@ -171,13 +171,13 @@ if authentication_status:
                 gender_selection = st.selectbox("Which gender", genders)
                 if gender_selection == "Men":
                     st.header("Team Selection Men XC")
-                    with st.form("entry_form", clear_on_submit=True):
+                    with st.form("entry_form", clear_on_submit=True, index = -1):
                         weekend_selection = st.selectbox("Select weekend", weekends_XC)
                         st.session_state['weekend_selection'] = weekend_selection
                         team_total = []
                         team_names = []
                         "---"
-                        selection1 = st.selectbox("Select first member of team", male_XC_athletes, index = -1)
+                        selection1 = st.selectbox("Select first member of team", male_XC_athletes)
                         if selection1 != "None":
                             team_names.append(selection1)
                             index1 = male_XC_athletes.index(selection1)
