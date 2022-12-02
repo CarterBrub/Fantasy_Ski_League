@@ -715,7 +715,7 @@ if authentication_status:
         info = {"name": ["Alex", "Tate", "Michael", "Mike", "Sander", "Fabian", "Gunnar", "Ronen", "Magnus", "Torje"],
                 "points": ["1700", "2336", "2173", "0", "0", "0", "1871", "0", "2736", "3061"]}
         df = pd.DataFrame(info)
-        st.dataframe(df.sort("points", ascending=False))
+        st.dataframe(df.sort_values(by="points", ascending=False))
 
 
 
