@@ -712,10 +712,30 @@ if authentication_status:
 
     if selected == "Standings":
         st.header("Standings World Cup 2022/23")
-        info = {"name": ["Alex", "Tate", "Michael", "Mike", "Sander", "Fabian", "Gunnar", "Ronen", "Magnus", "Torje"],
-                "points": ["1700", "2336", "2173", "0", "0", "0", "1871", "0", "2736", "3061"]}
+        info = {"name": ["Alex", "Tate", "Michael", "Mike", "Robert", "Gunnar", "Ronen", "Magnus", "Torje"],
+                "points": ["5106", "5097", "2949", "0", "2854", "4646", "236", "6179", "6687"]}
         df = pd.DataFrame(info)
         st.dataframe(df.sort_values(by="points", ascending=False))
+        "---"
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.subheader("XC Standings")
+            XC_points = {"name": ["Alex", "Tate", "Michael", "Mike", "Robert", "Gunnar", "Ronen", "Magnus", "Torje"],
+                         "points": ["2917", "2988", "2168", "0", "1594", "2899", "0", "4196", "4006"]}
+            df2 = pd.DataFrame(XC_points)
+            st.dataframe(df2.sort_values(by="points", ascending=False))
+        with col2:
+            st.subheader("Ski Jumping Standings")
+            Jump_points = {"name": ["Alex", "Tate", "Michael", "Mike", "Robert", "Gunnar", "Ronen", "Magnus", "Torje"],
+                         "points": ["913", "789", "88", "0", "547", "312", "0", "784", "1016"]}
+            df3 = pd.DataFrame(Jump_points)
+            st.dataframe(df3.sort_values(by="points", ascending=False))
+        with col3:
+            st.subheader("Nordic Combined Standings")
+            NoCo_points = {"name": ["Alex", "Tate", "Michael", "Mike", "Robert", "Gunnar", "Ronen", "Magnus", "Torje"],
+                           "points": ["1276", "1320", "693", "0", "713", "1435", "236", "1199", "1665"]}
+            df4 = pd.DataFrame(NoCo_points)
+            st.dataframe(df4.sort_values(by="points", ascending=False))
 
 
 
