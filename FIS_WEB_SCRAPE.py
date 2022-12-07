@@ -273,4 +273,3 @@ Female_Jump_Season_2022["LUNDBY Maren"] = "0"
 Female_NoCo_points_2022.append("0")
 Female_Jump_points_2022.append("0")
 
-print(len(Female_NoCo_points_2022), len(Female_NoCo_Season_2022), len(Female_NoCo_athletes), len(price_women_NoCo))
