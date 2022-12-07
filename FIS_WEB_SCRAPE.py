@@ -265,3 +265,7 @@ Female_NoCo_athletes.append("KORHONEN Minja")
 Female_NoCo_nationality.append("FIN")
 price_women_NoCo.append(4500)
 
+Female_NoCo_Season_2022["None"]= "n/a"
+Female_NoCo_Season_2022["KORHONEN Minja"] = "0"
+Female_Jump_Season_2022["None"] = "n/a"
+Female_Jump_Season_2022["LUNDBY Maren"] = "0"
