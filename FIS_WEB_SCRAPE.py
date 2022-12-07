@@ -257,3 +257,11 @@ Female_NoCo_points_2022.append("n/a")
 Male_Jump_points_2022.append("n/a")
 Female_Jump_points_2022.append("n/a")
 
+Female_Jump_athletes.append("LUNDBY Maren")
+Female_Jump_nationality.append("NOR")
+price_women_Hopp.append(4125)
+
+Female_NoCo_athletes.append("KORHONEN Minja")
+Female_NoCo_nationality.append("FIN")
+price_women_NoCo.append(4500)
+
