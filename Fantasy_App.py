@@ -234,10 +234,6 @@ if authentication_status:
                             team_total.append(int(price_men_XC[index8]))
                             calculator = calculator - int(price_men_XC[index8])
 
-                        if calculator < 0:
-                            st.error(f"You have {calculator} dollars remaining")
-                        if calculator >= 0:
-                            st.success(f"You have {calculator} dollars remaining")
 
                         "---"
                         check = st.form_submit_button("Check Team Total")
@@ -285,62 +281,72 @@ if authentication_status:
                         weekend_selection = st.selectbox("Select weekend", weekends_XC)
                         team_total = []
                         team_names = []
+                        calculator = 50000
                         "---"
                         selection1 = st.selectbox("Select first member of team", female_XC_athletes)
                         if selection1 != "None":
                             team_names.append(selection1)
                             index1 = female_XC_athletes.index(selection1)
                             team_total.append(int(price_women_XC[index1]))
+                            calculator = calculator - int(price_women_XC[index1])
 
                         selection2 = st.selectbox("Select second member of your team", female_XC_athletes)
                         if selection2 != "None":
                             team_names.append(selection2)
                             index2 = female_XC_athletes.index(selection2)
                             team_total.append(int(price_women_XC[index2]))
+                            calculator = calculator - int(price_women_XC[index2])
 
                         selection3 = st.selectbox("Select third member of your team", female_XC_athletes)
                         if selection3 != "None":
                             team_names.append(selection3)
                             index3 = female_XC_athletes.index(selection3)
                             team_total.append(int(price_women_XC[index3]))
+                            calculator = calculator - int(price_women_XC[index3])
 
                         selection4 = st.selectbox("Select fourth member of your team", female_XC_athletes)
                         if selection4 != "None":
                             team_names.append(selection4)
                             index4 = female_XC_athletes.index(selection4)
                             team_total.append(int(price_women_XC[index4]))
+                            calculator = calculator - int(price_women_XC[index4])
 
                         selection5 = st.selectbox("Select fifth member of your team", female_XC_athletes)
                         if selection5 != "None":
                             team_names.append(selection5)
                             index5 = female_XC_athletes.index(selection5)
                             team_total.append(int(price_women_XC[index5]))
+                            calculator = calculator - int(price_women_XC[index5])
 
                         selection6 = st.selectbox("Select sixth member of your team", female_XC_athletes)
                         if selection6 != "None":
                             team_names.append(selection6)
                             index6 = female_XC_athletes.index(selection6)
                             team_total.append(int(price_women_XC[index6]))
+                            calculator = calculator - int(price_women_XC[index6])
 
                         selection7 = st.selectbox("Select seventh member of your team", female_XC_athletes)
                         if selection3 != "None":
                             team_names.append(selection7)
                             index7 = female_XC_athletes.index(selection7)
                             team_total.append(int(price_women_XC[index7]))
+                            calculator = calculator - int(price_women_XC[index7])
 
                         selection8 = st.selectbox("Select final member of your team", female_XC_athletes)
                         if selection8 != "None":
                             team_names.append(selection8)
                             index8 = female_XC_athletes.index(selection8)
                             team_total.append(int(price_women_XC[index8]))
-
-                        calculator = sum(team_total)
-                        if calculator > 50000:
-                            st.warning(f"Your total is {calculator}")
-                        if calculator <= 50000:
-                            st.success(f"Your total is {calculator}")
+                            calculator = calculator - int(price_women_XC[index8])
 
                         "---"
+                        check = st.form_submit_button("Check Team Total")
+                        if check:
+                            if calculator < 0:
+                                st.error(f"You have {calculator} dollars remaining")
+                            if calculator >= 0:
+                                st.success(f"You have {calculator} dollars remaining")
+
                         submitted = st.form_submit_button("Save Team")
 
                         if submitted and sum(team_total) > 50000:
@@ -379,62 +385,72 @@ if authentication_status:
                         weekend_selection = st.selectbox("Select weekend", weekends_Jumping_Men)
                         team_total = []
                         team_names = []
+                        calculator = 50000
                         "---"
                         selection1 = st.selectbox("Select first member of team", Male_Jump_athletes)
                         if selection1 != "None":
                             team_names.append(selection1)
                             index1 = Male_Jump_athletes.index(selection1)
                             team_total.append(int(price_men_Hopp[index1]))
+                            calculator = calculator - int(price_men_Hopp[index1])
 
                         selection2 = st.selectbox("Select second member of your team", Male_Jump_athletes)
                         if selection2 != "None":
                             team_names.append(selection2)
                             index2 = Male_Jump_athletes.index(selection2)
                             team_total.append(int(price_men_Hopp[index2]))
+                            calculator = calculator - int(price_men_Hopp[index2])
 
                         selection3 = st.selectbox("Select third member of your team", Male_Jump_athletes)
                         if selection3 != "None":
                             team_names.append(selection3)
                             index3 = Male_Jump_athletes.index(selection3)
                             team_total.append(int(price_men_Hopp[index3]))
+                            calculator = calculator - int(price_men_Hopp[index3])
 
                         selection4 = st.selectbox("Select fourth member of your team", Male_Jump_athletes)
                         if selection4 != "None":
                             team_names.append(selection4)
                             index4 = Male_Jump_athletes.index(selection4)
                             team_total.append(int(price_men_Hopp[index4]))
+                            calculator = calculator - int(price_men_Hopp[index4])
 
                         selection5 = st.selectbox("Select fifth member of your team", Male_Jump_athletes)
                         if selection5 != "None":
                             team_names.append(selection5)
                             index5 = Male_Jump_athletes.index(selection5)
                             team_total.append(int(price_men_Hopp[index5]))
+                            calculator = calculator - int(price_men_Hopp[index5])
 
                         selection6 = st.selectbox("Select sixth member of your team", Male_Jump_athletes)
                         if selection6 != "None":
                             team_names.append(selection6)
                             index6 = Male_Jump_athletes.index(selection6)
                             team_total.append(int(price_men_Hopp[index6]))
+                            calculator = calculator - int(price_men_Hopp[index6])
 
                         selection7 = st.selectbox("Select seventh member of your team", Male_Jump_athletes)
                         if selection7 != "None":
                             team_names.append(selection7)
                             index7 = Male_Jump_athletes.index(selection7)
                             team_total.append(int(price_men_Hopp[index7]))
+                            calculator = calculator - int(price_men_Hopp[index7])
 
                         selection8 = st.selectbox("Select final member of your team", Male_Jump_athletes)
                         if selection8 != "None":
                             team_names.append(selection8)
                             index8 = Male_Jump_athletes.index(selection8)
                             team_total.append(int(price_men_Hopp[index8]))
-
-                        calculator = sum(team_total)
-                        if calculator > 50000:
-                            st.warning(f"Your total is {calculator}")
-                        if calculator <= 50000:
-                            st.success(f"Your total is {calculator}")
+                            calculator = calculator - int(price_men_Hopp[index8])
 
                         "---"
+                        check = st.form_submit_button("Check Team Total")
+                        if check:
+                            if calculator < 0:
+                                st.error(f"You have {calculator} dollars remaining")
+                            if calculator >= 0:
+                                st.success(f"You have {calculator} dollars remaining")
+
                         submitted = st.form_submit_button("Save Team")
                         if submitted and sum(team_total) > 50000:
                             submitted = False
@@ -470,62 +486,72 @@ if authentication_status:
                         weekend_selection = st.selectbox("Select weekend", weekends_Jumping_Women)
                         team_total = []
                         team_names = []
+                        calculator = 50000
                         "---"
                         selection1 = st.selectbox("Select first member of team", Female_Jump_athletes)
                         if selection1 != "None":
                             team_names.append(selection1)
                             index1 = Female_Jump_athletes.index(selection1)
                             team_total.append(int(price_women_Hopp[index1]))
+                            calculator = calculator - int(price_women_Hopp[index1])
 
                         selection2 = st.selectbox("Select second member of your team", Female_Jump_athletes)
                         if selection2 != "None":
                             team_names.append(selection2)
                             index2 = Female_Jump_athletes.index(selection2)
                             team_total.append(int(price_women_Hopp[index2]))
+                            calculator = calculator - int(price_women_Hopp[index2])
 
                         selection3 = st.selectbox("Select third member of your team", Female_Jump_athletes)
                         if selection3 != "None":
                             team_names.append(selection3)
                             index3 = Female_Jump_athletes.index(selection3)
                             team_total.append(int(price_women_Hopp[index3]))
+                            calculator = calculator - int(price_women_Hopp[index3])
 
                         selection4 = st.selectbox("Select fourth member of your team", Female_Jump_athletes)
                         if selection4 != "None":
                             team_names.append(selection4)
                             index4 = Female_Jump_athletes.index(selection4)
                             team_total.append(int(price_women_Hopp[index4]))
+                            calculator = calculator - int(price_women_Hopp[index4])
 
                         selection5 = st.selectbox("Select fifth member of your team", Female_Jump_athletes)
                         if selection5 != "None":
                             team_names.append(selection5)
                             index5 = Female_Jump_athletes.index(selection5)
                             team_total.append(int(price_women_Hopp[index5]))
+                            calculator = calculator - int(price_women_Hopp[index5])
 
                         selection6 = st.selectbox("Select sixth member of your team", Female_Jump_athletes)
                         if selection6 != "None":
                             team_names.append(selection6)
                             index6 = Female_Jump_athletes.index(selection6)
                             team_total.append(int(price_women_Hopp[index6]))
+                            calculator = calculator - int(price_women_Hopp[index6])
 
                         selection7 = st.selectbox("Select seventh member of your team", Female_Jump_athletes)
                         if selection7 != "None":
                             team_names.append(selection7)
                             index7 = Female_Jump_athletes.index(selection7)
                             team_total.append(int(price_women_Hopp[index7]))
+                            calculator = calculator - int(price_women_Hopp[index7])
 
                         selection8 = st.selectbox("Select final member of your team", Female_Jump_athletes)
                         if selection8 != "None":
                             team_names.append(selection8)
                             index8 = Female_Jump_athletes.index(selection8)
                             team_total.append(int(price_women_Hopp[index8]))
-
-                        calculator = sum(team_total)
-                        if calculator > 50000:
-                            st.warning(f"Your total is {calculator}")
-                        if calculator <= 50000:
-                            st.success(f"Your total is {calculator}")
+                            calculator = calculator - int(price_women_Hopp[index8])
 
                         "---"
+                        check = st.form_submit_button("Check Team Total")
+                        if check:
+                            if calculator < 0:
+                                st.error(f"You have {calculator} dollars remaining")
+                            if calculator >= 0:
+                                st.success(f"You have {calculator} dollars remaining")
+
                         submitted = st.form_submit_button("Save Team")
                         if submitted and sum(team_total) > 50000:
                             submitted = False
@@ -563,62 +589,72 @@ if authentication_status:
                         weekend_selection = st.selectbox("Select weekend", weekends_NoCo_Men)
                         team_total = []
                         team_names = []
+                        calculator = 50000
                         "---"
                         selection1 = st.selectbox("Select first member of team", Male_NoCo_athletes)
                         if selection1 != "None":
                             team_names.append(selection1)
                             index1 = Male_NoCo_athletes.index(selection1)
                             team_total.append(int(price_men_NoCo[index1]))
+                            calculator = calculator - int(price_men_NoCo[index1])
 
                         selection2 = st.selectbox("Select second member of your team", Male_NoCo_athletes)
                         if selection2 != "None":
                             team_names.append(selection2)
                             index2 = Male_NoCo_athletes.index(selection2)
                             team_total.append(int(price_men_NoCo[index2]))
+                            calculator = calculator - int(price_men_NoCo[index2])
 
                         selection3 = st.selectbox("Select third member of your team", Male_NoCo_athletes)
                         if selection3 != "None":
                             team_names.append(selection3)
                             index3 = Male_NoCo_athletes.index(selection3)
                             team_total.append(int(price_men_NoCo[index3]))
+                            calculator = calculator - int(price_men_NoCo[index3])
 
                         selection4 = st.selectbox("Select fourth member of your team", Male_NoCo_athletes)
                         if selection4 != "None":
                             team_names.append(selection4)
                             index4 = Male_NoCo_athletes.index(selection4)
                             team_total.append(int(price_men_NoCo[index4]))
+                            calculator = calculator - int(price_men_NoCo[index4])
 
                         selection5 = st.selectbox("Select fifth member of your team", Male_NoCo_athletes)
                         if selection5 != "None":
                             team_names.append(selection5)
                             index5 = Male_NoCo_athletes.index(selection5)
                             team_total.append(int(price_men_NoCo[index5]))
+                            calculator = calculator - int(price_men_NoCo[index5])
 
                         selection6 = st.selectbox("Select sixth member of your team", Male_NoCo_athletes)
                         if selection6 != "None":
                             team_names.append(selection6)
                             index6 = Male_NoCo_athletes.index(selection6)
                             team_total.append(int(price_men_NoCo[index6]))
+                            calculator = calculator - int(price_men_NoCo[index6])
 
                         selection7 = st.selectbox("Select seventh member of your team", Male_NoCo_athletes)
                         if selection7 != "None":
                             team_names.append(selection7)
                             index7 = Male_NoCo_athletes.index(selection7)
                             team_total.append(int(price_men_NoCo[index7]))
+                            calculator = calculator - int(price_men_NoCo[index7])
 
                         selection8 = st.selectbox("Select final member of your team", Male_NoCo_athletes)
                         if selection8 != "None":
                             team_names.append(selection8)
                             index8 = Male_NoCo_athletes.index(selection8)
                             team_total.append(int(price_men_NoCo[index8]))
-
-                        calculator = sum(team_total)
-                        if calculator > 50000:
-                            st.warning(f"Your total is {calculator}")
-                        if calculator <= 50000:
-                            st.success(f"Your total is {calculator}")
+                            calculator = calculator - int(price_men_NoCo[index8])
 
                         "---"
+                        check = st.form_submit_button("Check Team Total")
+                        if check:
+                            if calculator < 0:
+                                st.error(f"You have {calculator} dollars remaining")
+                            if calculator >= 0:
+                                st.success(f"You have {calculator} dollars remaining")
+
                         submitted = st.form_submit_button("Save Team")
                         if submitted and sum(team_total) > 50000:
                             submitted = False
@@ -654,62 +690,72 @@ if authentication_status:
                         weekend_selection = st.selectbox("Select weekend", weekends_NoCo_Women)
                         team_total = []
                         team_names = []
+                        calculator = 50000
                         "---"
                         selection1 = st.selectbox("Select first member of team", Female_NoCo_athletes)
                         if selection1 != "None":
                             team_names.append(selection1)
                             index1 = Female_NoCo_athletes.index(selection1)
                             team_total.append(int(price_women_NoCo[index1]))
+                            calculator = calculator - int(price_women_NoCo[index1])
 
                         selection2 = st.selectbox("Select second member of your team", Female_NoCo_athletes)
                         if selection2 != "None":
                             team_names.append(selection2)
                             index2 = Female_NoCo_athletes.index(selection2)
                             team_total.append(int(price_women_NoCo[index2]))
+                            calculator = calculator - int(price_women_NoCo[index2])
 
                         selection3 = st.selectbox("Select third member of your team", Female_NoCo_athletes)
                         if selection3 != "None":
                             team_names.append(selection3)
                             index3 = Female_NoCo_athletes.index(selection3)
                             team_total.append(int(price_women_NoCo[index3]))
+                            calculator = calculator - int(price_women_NoCo[index3])
 
                         selection4 = st.selectbox("Select fourth member of your team", Female_NoCo_athletes)
                         if selection4 != "None":
                             team_names.append(selection4)
                             index4 = Female_NoCo_athletes.index(selection4)
                             team_total.append(int(price_women_NoCo[index4]))
+                            calculator = calculator - int(price_women_NoCo[index4])
 
                         selection5 = st.selectbox("Select fifth member of your team", Female_NoCo_athletes)
                         if selection5 != "None":
                             team_names.append(selection5)
                             index5 = Female_NoCo_athletes.index(selection5)
                             team_total.append(int(price_women_NoCo[index5]))
+                            calculator = calculator - int(price_women_NoCo[index5])
 
                         selection6 = st.selectbox("Select sixth member of your team", Female_NoCo_athletes)
                         if selection6 != "None":
                             team_names.append(selection6)
                             index6 = Female_NoCo_athletes.index(selection6)
                             team_total.append(int(price_women_NoCo[index6]))
+                            calculator = calculator - int(price_women_NoCo[index6])
 
                         selection7 = st.selectbox("Select seventh member of your team", Female_NoCo_athletes)
                         if selection7 != "None":
                             team_names.append(selection7)
                             index7 = Female_NoCo_athletes.index(selection7)
                             team_total.append(int(price_women_NoCo[index7]))
+                            calculator = calculator - int(price_women_NoCo[index7])
 
                         selection8 = st.selectbox("Select final member of your team", Female_NoCo_athletes)
                         if selection8 != "None":
                             team_names.append(selection8)
                             index8 = Female_NoCo_athletes.index(selection8)
                             team_total.append(int(price_women_NoCo[index8]))
-
-                        calculator = sum(team_total)
-                        if calculator > 50000:
-                            st.warning(f"Your total is {calculator}")
-                        if calculator <= 50000:
-                            st.success(f"Your total is {calculator}")
+                            calculator = calculator - int(price_women_NoCo[index8])
 
                         "---"
+                        check = st.form_submit_button("Check Team Total")
+                        if check:
+                            if calculator < 0:
+                                st.error(f"You have {calculator} dollars remaining")
+                            if calculator >= 0:
+                                st.success(f"You have {calculator} dollars remaining")
+
                         submitted = st.form_submit_button("Save Team")
                         if submitted and sum(team_total) > 50000:
                             submitted = False
