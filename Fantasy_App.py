@@ -172,6 +172,7 @@ if authentication_status:
                 if gender_selection == "Men":
                     st.header("Team Selection Men XC")
                     with st.form("entry_form", clear_on_submit=True):
+                        calculator = 50000
                         weekend_selection = st.selectbox("Select weekend", weekends_XC)
                         st.session_state['weekend_selection'] = weekend_selection
                         team_total = []
@@ -182,55 +183,61 @@ if authentication_status:
                             team_names.append(selection1)
                             index1 = male_XC_athletes.index(selection1)
                             team_total.append(int(price_men_XC[index1]))
+                            calculator = calculator-int(price_men_XC[index1])
 
                         selection2 = st.selectbox(f"Select second member of your team", male_XC_athletes)
                         if selection2 != "None":
                             team_names.append(selection2)
                             index2 = male_XC_athletes.index(selection2)
                             team_total.append(int(price_men_XC[index2]))
+                            calculator = calculator - int(price_men_XC[index2])
 
                         selection3 = st.selectbox("Select third member of your team", male_XC_athletes)
                         if selection3 != "None":
                             team_names.append(selection3)
                             index3 = male_XC_athletes.index(selection3)
                             team_total.append(int(price_men_XC[index3]))
+                            calculator = calculator - int(price_men_XC[index3])
 
                         selection4 = st.selectbox("Select fourth member of your team", male_XC_athletes)
                         if selection4 != "None":
                             team_names.append(selection4)
                             index4 = male_XC_athletes.index(selection4)
                             team_total.append(int(price_men_XC[index4]))
+                            calculator = calculator - int(price_men_XC[index4])
 
                         selection5 = st.selectbox("Select fifth member of your team", male_XC_athletes)
                         if selection5 != "None":
                             team_names.append(selection5)
                             index5 = male_XC_athletes.index(selection5)
                             team_total.append(int(price_men_XC[index5]))
+                            calculator = calculator - int(price_men_XC[index5])
 
                         selection6 = st.selectbox("Select sixth member of your team", male_XC_athletes)
                         if selection6 != "None":
                             team_names.append(selection6)
                             index6 = male_XC_athletes.index(selection6)
                             team_total.append(int(price_men_XC[index6]))
+                            calculator = calculator - int(price_men_XC[index6])
 
                         selection7 = st.selectbox("Select seventh member of your team", male_XC_athletes)
                         if selection7 != "None":
                             team_names.append(selection7)
                             index7 = male_XC_athletes.index(selection7)
                             team_total.append(int(price_men_XC[index7]))
+                            calculator = calculator - int(price_men_XC[index7])
 
                         selection8 = st.selectbox("Select final member of your team", male_XC_athletes)
                         if selection8 != "None":
                             team_names.append(selection8)
                             index8 = male_XC_athletes.index(selection8)
                             team_total.append(int(price_men_XC[index8]))
+                            calculator = calculator - int(price_men_XC[index8])
 
-                        calculator = sum(team_total)
-                        st.text(f"{team_total}")
-                        if calculator > 50000:
-                            st.warning(f"You have {50000 - calculator} dollars remaining")
-                        if calculator <= 50000:
-                            st.success(f"You have {50000 - calculator} dollats remaing")
+                        if calculator < 0:
+                            st.error(f"You have {calculator} dollars remaining")
+                        if calculator >= 0:
+                            st.success(f"You have {calculator} dollars remaining")
 
                         "---"
                         submitted = st.form_submit_button("Save Team")
