@@ -272,4 +272,3 @@ Female_Jump_Season_2022["LUNDBY Maren"] = "0"
 
 Female_NoCo_points_2022.append("0")
 Female_Jump_points_2022.append("0")
-
