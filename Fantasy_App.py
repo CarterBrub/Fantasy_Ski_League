@@ -240,6 +240,13 @@ if authentication_status:
                             st.success(f"You have {calculator} dollars remaining")
 
                         "---"
+                        check = st.form_submit_button("Check Team Total")
+                        if check:
+                            if calculator < 0:
+                                st.error(f"You have {calculator} dollars remaining")
+                            if calculator >= 0:
+                                st.success(f"You have {calculator} dollars remaining")
+
                         submitted = st.form_submit_button("Save Team")
 
                         # ---------- SUBMISSION PERAMETERS ----------------------
