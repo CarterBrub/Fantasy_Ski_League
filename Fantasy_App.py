@@ -830,7 +830,7 @@ if authentication_status:
         with col2:
             st.subheader("Ski Jumping Standings")
             Jump_points = {"name": ["Alex", "Tate", "Michael", "Mike", "Robert", "Gunnar", "Ronen", "Magnus", "Torje"],
-                         "points": ["913", "789", "88", "0", "547", "312", "0", "784", "1016"]}
+                           "points": ["913", "789", "88", "0", "547", "312", "0", "784", "1016"]}
             df3 = pd.DataFrame(Jump_points)
             st.dataframe(df3.sort_values(by="points", ascending=False))
         with col3:
