@@ -260,7 +260,6 @@ if authentication_status:
                                 st.warning(f"Your Team total is above 50,000 dollars. Your total is: {sum(team_total)} dollars")
 
                         if submitted and sum(team_total) <= 50000:
-                            st.form(clear_on_submit=True)
                             array_names = np.array(team_names)
                             unique_names = np.unique(team_names)
                             if len(unique_names) != len(team_names):
