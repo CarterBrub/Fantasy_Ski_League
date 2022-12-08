@@ -225,8 +225,8 @@ if authentication_status:
                             index8 = male_XC_athletes.index(selection8)
                             team_total.append(int(price_men_XC[index8]))
 
-                        calculator = st.session_state(sum(team_total))
-                        st.header(f"{team_total}")
+                        calculator = sum(team_total)
+                        st.text(f"{team_total}")
                         if calculator > 50000:
                             st.warning(f"You have {50000 - calculator} dollars remaining")
                         if calculator <= 50000:
