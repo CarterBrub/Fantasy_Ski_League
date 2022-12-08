@@ -171,7 +171,7 @@ if authentication_status:
                 gender_selection = st.selectbox("Which gender", genders)
                 if gender_selection == "Men":
                     st.header("Team Selection Men XC")
-                    with st.form("entry_form", clear_on_submit=True):
+                    with st.form("entry_form", clear_on_submit=False):
                         calculator = 50000
                         weekend_selection = st.selectbox("Select weekend", weekends_XC)
                         st.session_state['weekend_selection'] = weekend_selection
@@ -260,6 +260,7 @@ if authentication_status:
                                 st.warning(f"Your Team total is above 50,000 dollars. Your total is: {sum(team_total)} dollars")
 
                         if submitted and sum(team_total) <= 50000:
+                            st.form(clear_on_submit=True)
                             array_names = np.array(team_names)
                             unique_names = np.unique(team_names)
                             if len(unique_names) != len(team_names):
