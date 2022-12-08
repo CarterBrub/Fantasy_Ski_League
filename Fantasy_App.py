@@ -277,7 +277,7 @@ if authentication_status:
 
                 if gender_selection == "Women":
                     st.header("Team Selection Women XC")
-                    with st.form("entry_form", clear_on_submit=True):
+                    with st.form("entry_form", clear_on_submit=False):
                         weekend_selection = st.selectbox("Select weekend", weekends_XC)
                         team_total = []
                         team_names = []
@@ -381,7 +381,7 @@ if authentication_status:
                 gender_selection = st.selectbox("Which gender", genders)
                 if gender_selection == "Men":
                     st.header("Team Selection Men's Jumping")
-                    with st.form("entry_form", clear_on_submit=True):
+                    with st.form("entry_form", clear_on_submit=False):
                         weekend_selection = st.selectbox("Select weekend", weekends_Jumping_Men)
                         team_total = []
                         team_names = []
@@ -482,7 +482,7 @@ if authentication_status:
                                 st_lottie(lottie_submitted, 1.5, False, False, "low", 50, 50)
                 if gender_selection == "Women":
                     st.header("Team Selection Women's Jumping")
-                    with st.form("entry_form", clear_on_submit=True):
+                    with st.form("entry_form", clear_on_submit=False):
                         weekend_selection = st.selectbox("Select weekend", weekends_Jumping_Women)
                         team_total = []
                         team_names = []
@@ -585,7 +585,7 @@ if authentication_status:
                 gender_selection = st.selectbox("Which gender", genders)
                 if gender_selection == "Men":
                     st.header("Team Selection Men Nordic Combined")
-                    with st.form("entry_form", clear_on_submit=True):
+                    with st.form("entry_form", clear_on_submit=False):
                         weekend_selection = st.selectbox("Select weekend", weekends_NoCo_Men)
                         team_total = []
                         team_names = []
@@ -686,7 +686,7 @@ if authentication_status:
                                 st_lottie(lottie_submitted, 1.5, False, False, "low", 50, 50)
                 if gender_selection == "Women":
                     st.header("Team Selection Women NoCo")
-                    with st.form("entry_form", clear_on_submit=True):
+                    with st.form("entry_form", clear_on_submit=False):
                         weekend_selection = st.selectbox("Select weekend", weekends_NoCo_Women)
                         team_total = []
                         team_names = []
