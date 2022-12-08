@@ -832,13 +832,13 @@ if authentication_status:
             Jump_points = {"name": ["Alex", "Tate", "Michael", "Mike", "Robert", "Gunnar", "Ronen", "Magnus", "Torje"],
                            "points": ["913", "789", "88", "0", "547", "312", "0", "784", "1016"]}
             df3 = pd.DataFrame(Jump_points)
-            st.dataframe(df3.sort_values(by="points", ascending=False, inplace=True))
+            st.dataframe(df3.sort_values(by="points", ascending=False))
         with col3:
             st.subheader("Nordic Combined Standings")
             NoCo_points = {"name": ["Alex", "Tate", "Michael", "Mike", "Robert", "Gunnar", "Ronen", "Magnus", "Torje"],
                            "points": ["1276", "1320", "693", "0", "713", "1435", "236", "1199", "1665"]}
             df4 = pd.DataFrame(NoCo_points)
-            st.dataframe(df4.sort_values(by="points", ascending=False, inplace=True))
+            st.dataframe(df4.sort_values(by="points", ascending=False))
 
 
 
