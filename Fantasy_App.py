@@ -224,6 +224,13 @@ if authentication_status:
                             team_names.append(selection8)
                             index8 = male_XC_athletes.index(selection8)
                             team_total.append(int(price_men_XC[index8]))
+
+                        calculator = sum(team_total)
+                        if calculator > 50000:
+                            st.warning(f"Your total is {calculator}")
+                        if calculator <= 50000:
+                            st.success(f"Your total is {calculator}")
+
                         "---"
                         submitted = st.form_submit_button("Save Team")
 
@@ -311,6 +318,13 @@ if authentication_status:
                             team_names.append(selection8)
                             index8 = female_XC_athletes.index(selection8)
                             team_total.append(int(price_women_XC[index8]))
+
+                        calculator = sum(team_total)
+                        if calculator > 50000:
+                            st.warning(f"Your total is {calculator}")
+                        if calculator <= 50000:
+                            st.success(f"Your total is {calculator}")
+
                         "---"
                         submitted = st.form_submit_button("Save Team")
 
@@ -398,6 +412,13 @@ if authentication_status:
                             team_names.append(selection8)
                             index8 = Male_Jump_athletes.index(selection8)
                             team_total.append(int(price_men_Hopp[index8]))
+
+                        calculator = sum(team_total)
+                        if calculator > 50000:
+                            st.warning(f"Your total is {calculator}")
+                        if calculator <= 50000:
+                            st.success(f"Your total is {calculator}")
+
                         "---"
                         submitted = st.form_submit_button("Save Team")
                         if submitted and sum(team_total) > 50000:
@@ -482,6 +503,13 @@ if authentication_status:
                             team_names.append(selection8)
                             index8 = Female_Jump_athletes.index(selection8)
                             team_total.append(int(price_women_Hopp[index8]))
+
+                        calculator = sum(team_total)
+                        if calculator > 50000:
+                            st.warning(f"Your total is {calculator}")
+                        if calculator <= 50000:
+                            st.success(f"Your total is {calculator}")
+
                         "---"
                         submitted = st.form_submit_button("Save Team")
                         if submitted and sum(team_total) > 50000:
@@ -568,6 +596,13 @@ if authentication_status:
                             team_names.append(selection8)
                             index8 = Male_NoCo_athletes.index(selection8)
                             team_total.append(int(price_men_NoCo[index8]))
+
+                        calculator = sum(team_total)
+                        if calculator > 50000:
+                            st.warning(f"Your total is {calculator}")
+                        if calculator <= 50000:
+                            st.success(f"Your total is {calculator}")
+
                         "---"
                         submitted = st.form_submit_button("Save Team")
                         if submitted and sum(team_total) > 50000:
@@ -652,6 +687,13 @@ if authentication_status:
                             team_names.append(selection8)
                             index8 = Female_NoCo_athletes.index(selection8)
                             team_total.append(int(price_women_NoCo[index8]))
+
+                        calculator = sum(team_total)
+                        if calculator > 50000:
+                            st.warning(f"Your total is {calculator}")
+                        if calculator <= 50000:
+                            st.success(f"Your total is {calculator}")
+
                         "---"
                         submitted = st.form_submit_button("Save Team")
                         if submitted and sum(team_total) > 50000:
