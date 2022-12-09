@@ -107,7 +107,7 @@ if authentication_status:
 
     selected = option_menu(
         menu_title="Main Menu",
-        options=["Home", "Athletes", "Events", "Team Selection", "My Team", "Standings"],
+        options=["Home", "Athletes", "Events", "Team Selection", "My Team", "Standings", "Contact Me"],
         icons=["house", "person-video2", "calendar-date", "person-plus", ":bar_chart:"],
         orientation="horizontal",
         )
@@ -878,6 +878,20 @@ if authentication_status:
                            "points": ["1276", "1320", "693", "0", "713", "1435", "236", "1199", "1665"]}
             df4 = pd.DataFrame(NoCo_points)
             st.dataframe(df4.sort_values(by="points", ascending=False))
+
+    if selected == "Contact Me":
+        st.title("Contact Me")
+        st.subheader("Have questions about the website or reccomendations for how to improve it? Please fill in this form, "
+                     "and I'll do my best to get back to you as soon as possible")
+        contact_form = """
+        <form action="https://formsubmit.co/FantasySkiLeague@gmail.com" method="POST">
+            <input type="text" name="name" required>
+            <input type="email" name="email" required>
+            <button type="submit">Send</button>
+        </form>
+        """
+        st.markdown(contact_form, unsafe_allow_html=True)
+
 
 
 
