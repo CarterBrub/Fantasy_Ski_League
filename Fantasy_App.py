@@ -137,36 +137,66 @@ if authentication_status:
                         Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
                         st.dataframe(Nationality_filter)
                 if gender_select == "Women":
-                    data = {'Athlete': female_XC_athletes, "Nationality": female_XC_nationality,
-                            "Points 21/22 Season": female_XC_points_2022, "Price": price_women_XC}
-                    df = pd.DataFrame(data)
-                    st.dataframe(df)
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        data = {'Athlete': female_XC_athletes, "Nationality": female_XC_nationality,
+                                "Points 21/22 Season": female_XC_points_2022, "Price": price_women_XC}
+                        df = pd.DataFrame(data)
+                        st.dataframe(df)
+                    with col2:
+                        selection = st.selectbox("Filter by nationality here", countries)
+                        Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
+                        st.dataframe(Nationality_filter)
         if option == "Ski Jumping":
                 st.subheader("Ski Jumping")
                 gender_select = st.selectbox("Which gender?", genders)
                 if gender_select == "Men":
-                    data = {'Athlete': Male_Jump_athletes, "Nationality": Male_Jump_nationality,
-                            "Points 21/22 Season": Male_Jump_points_2022, "Price": price_men_Hopp}
-                    df = pd.DataFrame(data)
-                    st.dataframe(df)
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        data = {'Athlete': Male_Jump_athletes, "Nationality": Male_Jump_nationality,
+                                "Points 21/22 Season": Male_Jump_points_2022, "Price": price_men_Hopp}
+                        df = pd.DataFrame(data)
+                        st.dataframe(df)
+                    with col2:
+                        selection = st.selectbox("Filter by nationality here", countries)
+                        Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
+                        st.dataframe(Nationality_filter)
                 if gender_select == "Women":
-                    data = {'Athlete': Female_Jump_athletes, "Nationality": Female_Jump_nationality,
-                            "Points 21/22 Season": Female_Jump_points_2022, "Price": price_women_Hopp}
-                    df = pd.DataFrame(data)
-                    st.dataframe(df)
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        data = {'Athlete': Female_Jump_athletes, "Nationality": Female_Jump_nationality,
+                                "Points 21/22 Season": Female_Jump_points_2022, "Price": price_women_Hopp}
+                        df = pd.DataFrame(data)
+                        st.dataframe(df)
+                    with col2:
+                        selection = st.selectbox("Filter by nationality here", countries)
+                        Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
+                        st.dataframe(Nationality_filter)
         if option == "Nordic Combined":
                 st.subheader("Nordic Combined")
                 gender_select = st.selectbox("Which gender?", genders)
                 if gender_select == "Men":
-                    data = {'Athlete': Male_NoCo_athletes, "Nationality": Male_NoCo_nationality,
-                            "Points 21/22 Season": Male_NoCo_points_2022, "Price": price_men_NoCo}
-                    df = pd.DataFrame(data)
-                    st.dataframe(df)
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        data = {'Athlete': Male_NoCo_athletes, "Nationality": Male_NoCo_nationality,
+                                "Points 21/22 Season": Male_NoCo_points_2022, "Price": price_men_NoCo}
+                        df = pd.DataFrame(data)
+                        st.dataframe(df)
+                    with col2:
+                        selection = st.selectbox("Filter by nationality here", countries)
+                        Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
+                        st.dataframe(Nationality_filter)
                 if gender_select == "Women":
-                    data = {'Athlete': Female_NoCo_athletes, "Nationality": Female_NoCo_nationality,
-                            "Points 21/22 Season": Female_NoCo_points_2022, "Price": price_women_NoCo}
-                    df = pd.DataFrame(data)
-                    st.dataframe(df)
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        data = {'Athlete': Female_NoCo_athletes, "Nationality": Female_NoCo_nationality,
+                                "Points 21/22 Season": Female_NoCo_points_2022, "Price": price_women_NoCo}
+                        df = pd.DataFrame(data)
+                        st.dataframe(df)
+                    with col2:
+                        selection = st.selectbox("Filter by nationality here", countries)
+                        Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
+                        st.dataframe(Nationality_filter)
 
     if selected == "Team Selection":
             st.text("Choose up to eight athletes of each gender in each sport.")
