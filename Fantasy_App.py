@@ -880,25 +880,28 @@ if authentication_status:
             st.dataframe(df4.sort_values(by="points", ascending=False))
 
     if selected == "Contact Me":
-        st.title("Contact Me")
-        st.subheader("Have questions about the website or reccomendations for how to improve it? Please fill in this form, "
-                     "and I'll do my best to get back to you as soon as possible")
+        st.header("Contact Me")
+
         contact_form = """
         <form action="https://formsubmit.co/FantasySkiLeague@gmail.com" method="POST">
-            <input type="text" name="name" placeholder = "Your name" required>
-            <input type="email" name="email" placeholder = "Your email" required>
-            <input type="hidden" name="_subject" value="New submission!">
-            <textarea name="message" placeholder="Your message here"></textarea>
-            <button type="submit">Send</button>
+             <input type="hidden" name="_captcha" value="false">
+             <input type="text" name="name" placeholder="Your name" required>
+             <input type="email" name="email" placeholder="Your email" required>
+             <textarea name="message" placeholder="Your message here"></textarea>
+             <button type="submit">Send</button>
         </form>
         """
+
         st.markdown(contact_form, unsafe_allow_html=True)
 
-        # USE CSS FILE
+
+        # Use Local CSS File
         def local_css(file_name):
-            with open (file_name) as f:
+            with open(file_name) as f:
                 st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-        local_css("style/style.css")
+
+
+        local_css("style.css")
 
 
 
