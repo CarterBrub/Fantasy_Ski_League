@@ -1,6 +1,7 @@
 
 import requests
 from bs4 import BeautifulSoup
+import numpy as np
 
 # -------------WORLD CUP SEASON 2022 CROSS COUNTRY MEN------------------------
 url = requests.get("https://data.fis-ski.com/fis_events/ajax/cupstandingsfunctions/load_cupstandings.html?sectorcode=CC&seasoncode=2022&cupcode=WC&disciplinecode=ALL&gendercode=M&nationcode=&pict_info=0")
@@ -272,3 +273,7 @@ Female_Jump_Season_2022["LUNDBY Maren"] = "0"
 
 Female_NoCo_points_2022.append("0")
 Female_Jump_points_2022.append("0")
+
+countries_numpy = np.array(male_XC_nationality)
+countries = np.unique(countries_numpy)
+print(countries)

@@ -20,7 +20,7 @@ from FIS_WEB_SCRAPE import Men_XC_Season_2022,\
     Male_Jump_points_2022, Female_Jump_Season_2022, Female_Jump_points_2022, Female_Jump_nationality, \
     Male_NoCo_points_2022, Male_NoCo_nationality, Male_NoCo_Season_2022, Female_NoCo_points_2022, \
     Female_NoCo_Season_2022, price_women_NoCo, price_men_XC, price_women_XC, price_men_Hopp, price_women_Hopp, \
-    price_men_NoCo, Female_NoCo_nationality, Female_NoCo_athletes
+    price_men_NoCo, Female_NoCo_nationality, Female_NoCo_athletes, countries
 
 pip.main(["install", "openpyxl"])
 # ----------------Settings--------------------
@@ -126,10 +126,16 @@ if authentication_status:
                 st.subheader("Cross Country")
                 gender_select = st.selectbox("Which gender?", genders)
                 if gender_select == "Men":
-                    data = {'Athlete': male_XC_athletes, "Nationality": male_XC_nationality,
-                            "Points 21/22 Season": male_XC_points_2022, "Price": price_men_XC}
-                    df = pd.DataFrame(data)
-                    st.dataframe(df)
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        data = {'Athlete': male_XC_athletes, "Nationality": male_XC_nationality,
+                                "Points 21/22 Season": male_XC_points_2022, "Price": price_men_XC}
+                        df = pd.DataFrame(data)
+                        st.dataframe(df)
+                    with col2:
+                        selection = st.selectbox("Filter by nationality here", countries)
+                        Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
+                        st.dataframe(Nationality_filter)
                 if gender_select == "Women":
                     data = {'Athlete': female_XC_athletes, "Nationality": female_XC_nationality,
                             "Points 21/22 Season": female_XC_points_2022, "Price": price_women_XC}
