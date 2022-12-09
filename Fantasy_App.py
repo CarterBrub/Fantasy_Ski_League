@@ -849,7 +849,7 @@ if authentication_status:
         st.subheader("Look at the athletes and their prices with the athletes tab, and then select your team by clicking "
                      "the team selection tab. To look at the FIS event schedule, check out Events. Enjoy!")
         "---"
-        st.markdown('#')
+        st.markdown('##')
         url = "https://www.instagram.com/carterbrub/"
         st.subheader("Follow me on Instagram! [link](%s)" % url)
 
