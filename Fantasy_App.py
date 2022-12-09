@@ -108,7 +108,7 @@ if authentication_status:
     selected = option_menu(
         menu_title="Main Menu",
         options=["Home", "Athletes", "Events", "Team Selection", "My Team", "Standings", "Contact Me"],
-        icons=["house", "person-video2", "calendar-date", "person-plus", ":bar_chart:", None, "mailbox"],
+        icons=["house", "person-video2", "calendar-date", "person-plus", ":bar_chart:", None, "e-mail"],
         orientation="horizontal",
         )
     "---"
@@ -849,6 +849,9 @@ if authentication_status:
         st.subheader("Look at the athletes and their prices with the athletes tab, and then select your team by clicking "
                      "the team selection tab. To look at the FIS event schedule, check out Events. Enjoy!")
         "---"
+        st.markdown()
+        st.markdown()
+        st.markdown()
         url = "https://www.instagram.com/carterbrub/"
         st.subheader("Follow me on Instagram! [link](%s)" % url)
 
