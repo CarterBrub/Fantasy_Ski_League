@@ -851,7 +851,6 @@ if authentication_status:
         "---"
         url = "https://www.instagram.com/carterbrub/"
         st.write("Follow me on Instagram! [link](%s)" % url)
-        st.markdown("Follow me on Instagram! [link](%s)" % url)
 
     if selected == "Standings":
         st.header("Standings World Cup 2022/23")
