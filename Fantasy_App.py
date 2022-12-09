@@ -853,7 +853,7 @@ if authentication_status:
         st.markdown('##')
 
         url = "https://www.instagram.com/carterbrub/"
-        st.text("Follow me on Instagram! [link](%s)" % url)
+        st.subheader("Follow me on Instagram! [link](%s)" % url)
 
     if selected == "Standings":
         st.header("Standings World Cup 2022/23")
