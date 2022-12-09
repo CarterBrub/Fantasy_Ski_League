@@ -885,13 +885,20 @@ if authentication_status:
                      "and I'll do my best to get back to you as soon as possible")
         contact_form = """
         <form action="https://formsubmit.co/FantasySkiLeague@gmail.com" method="POST">
-            <input type="text" name="name" required>
-            <input type="email" name="email" required>
+            <input type="text" name="name" placeholder = "Your name" required>
+            <input type="email" name="email" placeholder = "Your email" required>
+            <input type="hidden" name="_subject" value="New submission!">
+            <textarea name="message" placeholder="Your message here"></textarea>
             <button type="submit">Send</button>
         </form>
         """
         st.markdown(contact_form, unsafe_allow_html=True)
 
+        # USE CSS FILE
+        def local_css(file_name):
+            with open (file_name) as f:
+                st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+        local_css("style/style.css")
 
 
 
