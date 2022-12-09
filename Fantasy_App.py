@@ -848,6 +848,10 @@ if authentication_status:
         st.header("Welcome to the Fantasy Ski League!")
         st.subheader("Look at the athletes and their prices with the athletes tab, and then select your team by clicking "
                      "the team selection tab. To look at the FIS event schedule, check out Events. Enjoy!")
+        "---"
+        url = "https://www.instagram.com/carterbrub/"
+        st.write("Follow me on Instagram! [link](%s)" % url)
+        st.markdown("Follow me on Instagram! [link](%s)" % url)
 
     if selected == "Standings":
         st.header("Standings World Cup 2022/23")
