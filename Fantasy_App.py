@@ -208,7 +208,7 @@ if authentication_status:
                 gender_selection = st.selectbox("Which gender", genders)
                 if gender_selection == "Men":
                     #TESTING
-                    st.header("Male XC Athletes")
+
                     col1, col2 = st.columns(2)
                     with col1:
                         data = {'Athlete': male_XC_athletes, "Nationality": male_XC_nationality,
