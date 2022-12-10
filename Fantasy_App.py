@@ -327,7 +327,6 @@ if authentication_status:
                         # -----------------------------------------------------------------------------------
 
                 if gender_selection == "Women":
-                    st.header("Female XC Athletes")
                     col1, col2 = st.columns(2)
                     with col1:
                         data = {'Athlete': female_XC_athletes, "Nationality": female_XC_nationality,
@@ -443,7 +442,6 @@ if authentication_status:
             if sport_selection == "Ski Jumping":
                 gender_selection = st.selectbox("Which gender", genders)
                 if gender_selection == "Men":
-                    st.header("Male Ski Jumping Athletes")
                     col1, col2 = st.columns(2)
                     with col1:
                         data = {'Athlete': Male_Jump_athletes, "Nationality": Male_Jump_nationality,
@@ -556,7 +554,6 @@ if authentication_status:
                                 st.success(f"Your Mens Ski Jumping Team for {weekend_selection} Has ben saved. Your total was {sum(team_total)} dollars")
                                 st_lottie(lottie_submitted, 1.5, False, False, "low", 50, 50)
                 if gender_selection == "Women":
-                    st.header("Female Jumping Athletes")
                     col1, col2 = st.columns(2)
                     with col1:
                         data = {'Athlete': Female_Jump_athletes, "Nationality": Female_Jump_nationality,
@@ -671,7 +668,6 @@ if authentication_status:
             if sport_selection == "Nordic Combined":
                 gender_selection = st.selectbox("Which gender", genders)
                 if gender_selection == "Men":
-                    st.header("Male Nordic Combined Athletes")
                     col1, col2 = st.columns(2)
                     with col1:
                         data = {'Athlete': Male_NoCo_athletes, "Nationality": Male_NoCo_nationality,
@@ -784,7 +780,6 @@ if authentication_status:
                                 st.success(f"Your Mens Nordic Combined Team for {weekend_selection} Has ben saved. Your total was: {sum(team_total)} dollars")
                                 st_lottie(lottie_submitted, 1.5, False, False, "low", 50, 50)
                 if gender_selection == "Women":
-                    st.header("Female Nordic Combined Athletes")
                     col1, col2 = st.columns(2)
                     with col1:
                         data = {'Athlete': Female_NoCo_athletes, "Nationality": Female_NoCo_nationality,
