@@ -202,10 +202,25 @@ if authentication_status:
             st.text("Choose up to eight athletes of each gender in each sport.")
             st.text("You will have 50,000 dollars per gender for your team. See the athlete prices on the athletes tab.")
             st.text("If you don't want to fill a slot, scroll to the bottom and select None.")
+
             sport_selection = st.selectbox("Which Sport", sports)
             if sport_selection == "Cross Country":
                 gender_selection = st.selectbox("Which gender", genders)
                 if gender_selection == "Men":
+                    #TESTING
+                    st.header("Male XC Athletes")
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        data = {'Athlete': male_XC_athletes, "Nationality": male_XC_nationality,
+                                "Points 21/22 Season": male_XC_points_2022, "Price": price_men_XC}
+                        df = pd.DataFrame(data)
+                        st.dataframe(df)
+                    with col2:
+                        selection = st.selectbox("Filter by nationality here", countries)
+                        Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
+                        st.dataframe(Nationality_filter)
+                    "---"
+                    #TESTING
                     st.header("Team Selection Men XC")
                     with st.form("entry_form", clear_on_submit=False):
                         calculator = 50000
