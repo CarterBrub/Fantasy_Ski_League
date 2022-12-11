@@ -125,6 +125,7 @@ if authentication_status:
                 st.subheader("Cross Country")
                 gender_select = st.selectbox("Which gender?", genders)
                 if gender_select == "Men":
+                    @st.cache
                     def MEN_XC_ATHLETE_TABLE():
                         col1, col2 = st.columns(2)
                         with col1:
