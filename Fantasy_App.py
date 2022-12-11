@@ -126,15 +126,17 @@ if authentication_status:
                 gender_select = st.selectbox("Which gender?", genders)
                 if gender_select == "Men":
                     col1, col2 = st.columns(2)
-                    with col1:
-                        data = {'Athlete': male_XC_athletes, "Nationality": male_XC_nationality,
-                                "Points 21/22 Season": male_XC_points_2022, "Price": price_men_XC}
-                        df = pd.DataFrame(data)
-                        st.dataframe(df)
-                    with col2:
-                        selection = st.selectbox("Filter by nationality here", countries)
-                        Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
-                        st.dataframe(Nationality_filter)
+                    def Table():
+                        with col1:
+                            data = {'Athlete': male_XC_athletes, "Nationality": male_XC_nationality,
+                                    "Points 21/22 Season": male_XC_points_2022, "Price": price_men_XC}
+                            df = pd.DataFrame(data)
+                            st.dataframe(df)
+                        with col2:
+                            selection = st.selectbox("Filter by nationality here", countries)
+                            Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
+                            st.dataframe(Nationality_filter)
+                    Table()
                 if gender_select == "Women":
                     col1, col2 = st.columns(2)
                     with col1:
