@@ -127,10 +127,14 @@ if authentication_status:
                 if gender_select == "Men":
                     col1, col2 = st.columns(2)
                     with col1:
-                        data = {'Athlete': male_XC_athletes, "Nationality": male_XC_nationality,
-                                "Points 21/22 Season": male_XC_points_2022, "Price": price_men_XC}
-                        df = pd.DataFrame(data)
-                        st.dataframe(df)
+                        # TESTING
+                        def MEN_XC_ATHLETE_TABLE():
+                            data = {'Athlete': male_XC_athletes, "Nationality": male_XC_nationality,
+                                    "Points 21/22 Season": male_XC_points_2022, "Price": price_men_XC}
+                            df = pd.DataFrame(data)
+                            st.dataframe(df)
+                        MEN_XC_ATHLETE_TABLE()
+                        # TESTING
                     with col2:
                         selection = st.selectbox("Filter by nationality here", countries)
                         Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
