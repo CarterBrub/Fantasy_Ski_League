@@ -12,7 +12,6 @@ from streamlit_lottie import st_lottie
 import json
 import pip
 import numpy as np
-
 from FIS_WEB_SCRAPE import Men_XC_Season_2022,\
     male_XC_athletes, male_XC_nationality, male_XC_points_2022,   \
     female_XC_points_2022, female_XC_athletes, female_XC_nationality, Women_XC_Season_2022, \
