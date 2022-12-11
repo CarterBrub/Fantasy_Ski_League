@@ -135,7 +135,7 @@ if authentication_status:
                             return st.dataframe(df)
                     Table()
                     with col2:
-                        @st.cache(allow_output_mutation=True, suppress_st_warning=True)
+                        @st.cache(allow_output_mutation=True)
                         def Table2():
                             selection = st.selectbox("Filter by nationality here", countries)
                             data = {'Athlete': male_XC_athletes, "Nationality": male_XC_nationality,
