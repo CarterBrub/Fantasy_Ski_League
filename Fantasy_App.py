@@ -125,19 +125,16 @@ if authentication_status:
                 st.subheader("Cross Country")
                 gender_select = st.selectbox("Which gender?", genders)
                 if gender_select == "Men":
-                    @st.cache(persist=True, allow_output_mutation=True)
-                    def MEN_XC_ATHLETE_TABLE():
-                        col1, col2 = st.columns(2)
-                        with col1:
-                            data = {'Athlete': male_XC_athletes, "Nationality": male_XC_nationality,
-                                    "Points 21/22 Season": male_XC_points_2022, "Price": price_men_XC}
-                            df = pd.DataFrame(data)
-                            st.dataframe(df)
-                        with col2:
-                            selection = st.selectbox("Filter by nationality here", countries)
-                            Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
-                            st.dataframe(Nationality_filter)
-                    MEN_XC_ATHLETE_TABLE()
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        data = {'Athlete': male_XC_athletes, "Nationality": male_XC_nationality,
+                                "Points 21/22 Season": male_XC_points_2022, "Price": price_men_XC}
+                        df = pd.DataFrame(data)
+                        st.dataframe(df)
+                    with col2:
+                        selection = st.selectbox("Filter by nationality here", countries)
+                        Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
+                        st.dataframe(Nationality_filter)
                 if gender_select == "Women":
                     col1, col2 = st.columns(2)
                     with col1:
