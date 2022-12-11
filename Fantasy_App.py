@@ -126,6 +126,7 @@ if authentication_status:
                 gender_select = st.selectbox("Which gender?", genders)
                 if gender_select == "Men":
                     col1, col2 = st.columns(2)
+                    @st.cache
                     def Table():
                         with col1:
                             data = {'Athlete': male_XC_athletes, "Nationality": male_XC_nationality,
