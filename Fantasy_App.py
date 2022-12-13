@@ -928,7 +928,7 @@ if authentication_status:
     if selected == "Standings":
         st.header("Standings World Cup 2022/23")
         info = {"name": ["Alex", "Tate", "Michael", "Mike", "Robert", "Gunnar", "Ronen", "Magnus", "Torje"],
-                "points": ["5106", "5097", "2949", "0", "2854", "4646", "236", "6179", "6687"]}
+                "points": ["6985", "7286", "3688", "0", "4145", "6701", "236", "7923", "8735"]}
         df = pd.DataFrame(info)
         st.dataframe(df.sort_values(by="points", ascending=False))
         "---"
@@ -936,13 +936,13 @@ if authentication_status:
         with col1:
             st.subheader("XC Standings")
             XC_points = {"name": ["Alex", "Tate", "Michael", "Mike", "Robert", "Gunnar", "Ronen", "Magnus", "Torje"],
-                         "points": ["2917", "2988", "2168", "0", "1594", "2899", "0", "4196", "4006"]}
+                         "points": ["4104", "4243", "2727", "0", "2128", "4309", "0", "5392", "5135"]}
             df2 = pd.DataFrame(XC_points)
             st.dataframe(df2.sort_values(by="points", ascending=False))
         with col2:
             st.subheader("Ski Jumping Standings")
             Jump_points = {"name": ["Alex", "Tate", "Michael", "Mike", "Robert", "Gunnar", "Ronen", "Magnus", "Torje"],
-                           "points": ["913", "789", "88", "0", "547", "312", "0", "784", "1016"]}
+                           "points": ["1605", "1723", "268", "0", "1304", "957", "0", "1332", "1935"]}
             df3 = pd.DataFrame(Jump_points)
             st.dataframe(df3.sort_values(by="points", ascending=False))
         with col3:
