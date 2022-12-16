@@ -229,34 +229,34 @@ for i in range(len(Female_NoCo_points_2022)):
     price = round(3 * (((int(Female_NoCo_points_2022[i]) / max_NoCo_points_women_2022) / 2) * 100000) / 4)
     price_women_NoCo.append(price)
 
-price_men_XC[:0] = 0
-price_women_XC[:0] = 0
-price_men_NoCo[:0] = 0
-price_women_NoCo[:0] = 0
-price_men_Hopp[:0] = 0
-price_women_Hopp[:0] = 0
+price_men_XC.insert(0, 0)
+price_women_XC.insert(0, 0)
+price_men_NoCo.insert(0, 0)
+price_women_NoCo.insert(0, 0)
+price_men_Hopp.insert(0, 0)
+price_women_Hopp.insert(0, 0)
 
 
-male_XC_athletes[:0] = "None"
-female_XC_athletes[:0] = "None"
-Male_NoCo_athletes[:0] = "None"
-Female_NoCo_athletes[:0] = "None"
-Male_Jump_athletes[:0] = "None"
-Female_Jump_athletes[:0] = "None"
+male_XC_athletes.insert(0, "None")
+female_XC_athletes.insert(0, "None")
+Male_NoCo_athletes.insert(0, "None")
+Female_NoCo_athletes.insert(0, "None")
+Male_Jump_athletes.insert(0, "None")
+Female_Jump_athletes.insert(0, "None")
 
-male_XC_nationality[:0] = "n/a"
-female_XC_nationality[:0] = "n/a"
-Male_NoCo_nationality[:0] = "n/a"
-Female_NoCo_nationality[:0] = "n/a"
-Male_Jump_nationality[:0] = "n/a"
-Female_Jump_nationality[:0] = "n/a"
+male_XC_nationality.insert(0, "n/a")
+female_XC_nationality.insert(0, "n/a")
+Male_NoCo_nationality.insert(0, "n/a")
+Female_NoCo_nationality.insert(0, "n/a")
+Male_Jump_nationality.insert(0, "n/a")
+Female_Jump_nationality.insert(0, "n/a")
 
-male_XC_points_2022[:0] = "n/a"
-female_XC_points_2022[:0] = "n/a"
-Male_NoCo_points_2022[:0] = "n/a"
-Female_NoCo_points_2022[:0] = "n/a"
-Male_Jump_points_2022[:0] = "n/a"
-Female_Jump_points_2022[:0] = "n/a"
+male_XC_points_2022.insert(0, "n/a")
+female_XC_points_2022.insert(0, "n/a")
+Male_NoCo_points_2022.insert(0, "n/a")
+Female_NoCo_points_2022.insert(0, "n/a")
+Male_Jump_points_2022.insert(0, "n/a")
+Female_Jump_points_2022.insert(0, "n/a")
 
 Female_Jump_athletes.append("LUNDBY Maren")
 Female_Jump_nationality.append("NOR")
@@ -276,4 +276,4 @@ Female_Jump_points_2022.append("0")
 
 countries_numpy = np.array(male_XC_nationality)
 countries = np.unique(countries_numpy)
-print(countries)
+print(male_XC_athletes)
