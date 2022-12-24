@@ -1044,7 +1044,14 @@ if authentication_status:
             for hit in overall_score6:
                 NoCo_Women_points.append(hit.text.strip())
             NoCo_Women_Overall = {NoCo_Women[i]: NoCo_Women_points[i] for i in range(len(NoCo_Women))}
+
             if button:
+                db.insert_period(date_time, None, "Overall", XC_Men_Overall)
+                db.insert_period(date_time, None, "Overall", XC_Women_Overall)
+                db.insert_period(date_time, None, "Overall", Jump_Men_Overall)
+                db.insert_period(date_time, None, "Overall", Jump_Women_Overall)
+                db.insert_period(date_time, None, "Overall", NoCo_Men_Overall)
+                db.insert_period(date_time, None, "Overall", NoCo_Women_Overall)
                 st.write("Points updated")
 
 
@@ -1098,8 +1105,4 @@ if authentication_status:
 
 
         local_css("style.css")
-
-
-
-
 
