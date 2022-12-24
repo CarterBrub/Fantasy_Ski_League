@@ -12,6 +12,8 @@ from streamlit_lottie import st_lottie
 import json
 import pip
 import numpy as np
+import requests
+from bs4 import BeautifulSoup
 from FIS_WEB_SCRAPE import Men_XC_Season_2022,\
     male_XC_athletes, male_XC_nationality, male_XC_points_2022,   \
     female_XC_points_2022, female_XC_athletes, female_XC_nationality, Women_XC_Season_2022, \
@@ -972,6 +974,121 @@ if authentication_status:
 
 
         local_css("style.css")
+
+    if name == "Carter Brubaker":
+        st.sidebar.form_submit_button("Calculate Weekend")
+        url1 = requests.get(
+            "https://data.fis-ski.com/fis_events/ajax/cupstandingsfunctions/load_cupstandings.html?sectorcode=CC&seasoncode=20223&cupcode=WC&disciplinecode=ALL&gendercode=M&nationcode=&pict_info=0")
+        url2 = requests.get(
+            "https://data.fis-ski.com/fis_events/ajax/cupstandingsfunctions/load_cupstandings.html?sectorcode=CC&seasoncode=2023&cupcode=WC&disciplinecode=ALL&gendercode=W&nationcode=&pict_info=0")
+        url3 = requests.get(
+            "https://data.fis-ski.com/fis_events/ajax/cupstandingsfunctions/load_cupstandings.html?sectorcode=JP&seasoncode=2023&cupcode=WC&disciplinecode=ALL&gendercode=M&nationcode=&pict_info=0")
+        url4 = requests.get(
+            "https://data.fis-ski.com/fis_events/ajax/cupstandingsfunctions/load_cupstandings.html?sectorcode=JP&seasoncode=2023&cupcode=WC&disciplinecode=ALL&gendercode=W&nationcode=&pict_info=0")
+        url5 = requests.get(
+            "https://data.fis-ski.com/fis_events/ajax/cupstandingsfunctions/load_cupstandings.html?sectorcode=NK&seasoncode=2023&cupcode=WC&disciplinecode=ALL&gendercode=M&nationcode=&pict_info=0")
+        url6 = requests.get(
+            "https://data.fis-ski.com/fis_events/ajax/cupstandingsfunctions/load_cupstandings.html?sectorcode=NK&seasoncode=2023&cupcode=WC&disciplinecode=ALL&gendercode=W&nationcode=&pict_info=0")
+        htmltext = url1.text
+        htmltext2 = url2.text
+        htmltext3 = url3.text
+        htmltext4 = url4.text
+        htmltext5 = url4.text
+        htmltext6 = url6.text
+        XC_Men = []
+        XC_Men_points = []
+        XC_Women = []
+        XC_Women_points = []
+        Jump_Men = []
+        Jump_Men_points = []
+        Jump_Women_points = []
+        Jump_Women = []
+        NoCo_Men = []
+        NoCo_Men_points = []
+        NoCo_Women = []
+        NoCo_Women_points = []
+        # ----------------------------------------
+        soup = BeautifulSoup(htmltext, "html.parser")
+        overall_score = soup.find_all("div",
+                                      {"class": "pl-xs-1 pl-sm-1 g-xs-10 g-sm-7 g-md-9 g-lg-8 justify-right bold"})
+        athlete_name = soup.find_all("div", {"class": "g-xs-10 g-sm-9 g-md-4 g-lg-4 justify-left bold align-xs-top"})
+
+        for hit in athlete_name:
+            XC_Men.append(hit.text.strip())
+
+        for hit in overall_score:
+            XC_Men_points.append(hit.text.strip())
+        XC_Men_Overall = {XC_Men[i]: XC_Men_points[i] for i in range(len(XC_Men))}
+        # ------------------------------------------
+
+        soup2 = BeautifulSoup(htmltext, "html.parser")
+        overall_score2 = soup2.find_all("div",
+                                        {"class": "pl-xs-1 pl-sm-1 g-xs-10 g-sm-7 g-md-9 g-lg-8 justify-right bold"})
+        athlete_name2 = soup2.find_all("div", {"class": "g-xs-10 g-sm-9 g-md-4 g-lg-4 justify-left bold align-xs-top"})
+        athlete_country2 = soup2.find_all("span", {"class": "country__name-short"})
+
+        for hit in athlete_name2:
+            XC_Women.append(hit.text.strip())
+
+        for hit in overall_score2:
+            XC_Women_points.append(hit.text.strip())
+        XC_Women_Overall = {XC_Women[i]: XC_Women_points[i] for i in range(len(XC_Women))}
+        # ----------------------------------------
+        soup3 = BeautifulSoup(htmltext, "html.parser")
+        overall_score3 = soup3.find_all("div",
+                                        {"class": "pl-xs-1 pl-sm-1 g-xs-10 g-sm-7 g-md-9 g-lg-8 justify-right bold"})
+        athlete_name3 = soup3.find_all("div", {"class": "g-xs-10 g-sm-9 g-md-4 g-lg-4 justify-left bold align-xs-top"})
+        athlete_country3 = soup3.find_all("span", {"class": "country__name-short"})
+
+        for hit in athlete_name3:
+            Jump_Men.append(hit.text.strip())
+
+        for hit in overall_score3:
+            Jump_Women_points.append(hit.text.strip())
+        Jump_Men_Overall = {Jump_Men[i]: Jump_Men_points[i] for i in range(len(Jump_Men))}
+        # ------------------------------------------
+        soup4 = BeautifulSoup(htmltext, "html.parser")
+        overall_score4 = soup4.find_all("div",
+                                        {"class": "pl-xs-1 pl-sm-1 g-xs-10 g-sm-7 g-md-9 g-lg-8 justify-right bold"})
+        athlete_name4 = soup4.find_all("div", {"class": "g-xs-10 g-sm-9 g-md-4 g-lg-4 justify-left bold align-xs-top"})
+        athlete_country4 = soup4.find_all("span", {"class": "country__name-short"})
+
+        for hit in athlete_name4:
+            Jump_Women.append(hit.text.strip())
+
+        for hit in overall_score4:
+            Jump_Women_points.append(hit.text.strip())
+        Jump_Women_Overall = {Jump_Women[i]: Jump_Women_points[i] for i in range(len(Jump_Women))}
+        # ------------------------------------------
+        soup5 = BeautifulSoup(htmltext, "html.parser")
+        overall_score5 = soup5.find_all("div",
+                                        {"class": "pl-xs-1 pl-sm-1 g-xs-10 g-sm-7 g-md-9 g-lg-8 justify-right bold"})
+        athlete_name5 = soup5.find_all("div", {"class": "g-xs-10 g-sm-9 g-md-4 g-lg-4 justify-left bold align-xs-top"})
+        athlete_country5 = soup5.find_all("span", {"class": "country__name-short"})
+        for hit in athlete_name5:
+            NoCo_Men.append(hit.text.strip())
+
+        for hit in overall_score5:
+            NoCo_Men_points.append(hit.text.strip())
+        NoCo_Men_Overall = {NoCo_Men[i]: NoCo_Men_points[i] for i in range(len(NoCo_Men))}
+        # -------------------------------------------
+        soup6 = BeautifulSoup(htmltext, "html.parser")
+        overall_score6 = soup6.find_all("div",
+                                        {"class": "pl-xs-1 pl-sm-1 g-xs-10 g-sm-7 g-md-9 g-lg-8 justify-right bold"})
+        athlete_name6 = soup6.find_all("div", {"class": "g-xs-10 g-sm-9 g-md-4 g-lg-4 justify-left bold align-xs-top"})
+        athlete_country6 = soup6.find_all("span", {"class": "country__name-short"})
+
+        for hit in athlete_name6:
+            NoCo_Women.append(hit.text.strip())
+
+        for hit in overall_score6:
+            NoCo_Women_points.append(hit.text.strip())
+        NoCo_Women_Overall = {NoCo_Women[i]: NoCo_Women_points[i] for i in range(len(NoCo_Women))}
+
+        if submitted:
+            st.success("Points updated")
+
+
 
 
 
