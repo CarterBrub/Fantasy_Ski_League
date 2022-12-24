@@ -229,7 +229,6 @@ if authentication_status:
                         st.session_state['weekend_selection'] = weekend_selection
                         team_total = []
                         team_names = []
-                        "---"
                         selection1 = st.selectbox("Select first member of team", male_XC_athletes)
                         if selection1 != "None":
                             team_names.append(selection1)
@@ -341,11 +340,10 @@ if authentication_status:
                     "---"
                     st.header("Team Selection Women XC")
                     with st.form("entry_form", clear_on_submit=False):
-                        weekend_selection = st.selectbox("Select weekend", weekends_XC)
+                        weekend_selection = f"{sport_selection}, {gender_selection}"
                         team_total = []
                         team_names = []
                         calculator = 50000
-                        "---"
                         selection1 = st.selectbox("Select first member of team", female_XC_athletes)
                         if selection1 != "None":
                             team_names.append(selection1)
@@ -438,7 +436,7 @@ if authentication_status:
                                 st.session_state.weekend_selection = weekend_selection
                                 db.insert_period(json_str, name, st.session_state.weekend_selection,
                                                  st.session_state.Team_names)
-                                st.success(f"Your Womens XC Team for {weekend_selection} Has ben saved. Your sum was: {sum(team_total)} dollars")
+                                st.success(f"Your Women's XC Team has ben saved. Your sum was: {sum(team_total)} dollars")
                                 st_lottie(lottie_submitted, 1.5, False, False, "low", 50, 50)
             if sport_selection == "Ski Jumping":
                 gender_selection = st.selectbox("Which gender", genders)
@@ -456,11 +454,10 @@ if authentication_status:
                     "---"
                     st.header("Team Selection Men's Jumping")
                     with st.form("entry_form", clear_on_submit=False):
-                        weekend_selection = st.selectbox("Select weekend", weekends_Jumping_Men)
+                        weekend_selection = f"{sport_selection}, {gender_selection}"
                         team_total = []
                         team_names = []
                         calculator = 50000
-                        "---"
                         selection1 = st.selectbox("Select first member of team", Male_Jump_athletes)
                         if selection1 != "None":
                             team_names.append(selection1)
@@ -552,7 +549,7 @@ if authentication_status:
                                 st.session_state.weekend_selection = weekend_selection
                                 db.insert_period(json_str, name, st.session_state.weekend_selection,
                                                  st.session_state.Team_names)
-                                st.success(f"Your Mens Ski Jumping Team for {weekend_selection} Has ben saved. Your total was {sum(team_total)} dollars")
+                                st.success(f"Your Mens Ski Jumping Team for has been saved. Your total was {sum(team_total)} dollars")
                                 st_lottie(lottie_submitted, 1.5, False, False, "low", 50, 50)
                 if gender_selection == "Women":
                     col1, col2 = st.columns(2)
@@ -568,7 +565,7 @@ if authentication_status:
                     "---"
                     st.header("Team Selection Women's Jumping")
                     with st.form("entry_form", clear_on_submit=False):
-                        weekend_selection = st.selectbox("Select weekend", weekends_Jumping_Women)
+                        weekend_selection = f"{sport_selection}, {gender_selection}"
                         team_total = []
                         team_names = []
                         calculator = 50000
@@ -664,7 +661,7 @@ if authentication_status:
                                 st.session_state.weekend_selection = weekend_selection
                                 db.insert_period(json_str, name, st.session_state.weekend_selection,
                                                  st.session_state.Team_names)
-                                st.success(f"Your Womens Ski Jumping Team for {weekend_selection} Has ben saved. Your total was: {sum(team_total)} dollars")
+                                st.success(f"Your Womens Ski Jumping Team has been saved. Your total was: {sum(team_total)} dollars")
                                 st_lottie(lottie_submitted, 1.5, False, False, "low", 50, 50)
             if sport_selection == "Nordic Combined":
                 gender_selection = st.selectbox("Which gender", genders)
@@ -682,11 +679,10 @@ if authentication_status:
                     "---"
                     st.header("Team Selection Men Nordic Combined")
                     with st.form("entry_form", clear_on_submit=False):
-                        weekend_selection = st.selectbox("Select weekend", weekends_NoCo_Men)
+                        weekend_selection = f"{sport_selection}, {gender_selection}"
                         team_total = []
                         team_names = []
                         calculator = 50000
-                        "---"
                         selection1 = st.selectbox("Select first member of team", Male_NoCo_athletes)
                         if selection1 != "None":
                             team_names.append(selection1)
@@ -778,7 +774,7 @@ if authentication_status:
                                 st.session_state.weekend_selection = weekend_selection
                                 db.insert_period(json_str, name, st.session_state.weekend_selection,
                                                  st.session_state.Team_names)
-                                st.success(f"Your Mens Nordic Combined Team for {weekend_selection} Has ben saved. Your total was: {sum(team_total)} dollars")
+                                st.success(f"Your Mens Nordic Combined Team has been saved. Your total was: {sum(team_total)} dollars")
                                 st_lottie(lottie_submitted, 1.5, False, False, "low", 50, 50)
                 if gender_selection == "Women":
                     col1, col2 = st.columns(2)
@@ -794,11 +790,11 @@ if authentication_status:
                     "---"
                     st.header("Team Selection Women NoCo")
                     with st.form("entry_form", clear_on_submit=False):
-                        weekend_selection = st.selectbox("Select weekend", weekends_NoCo_Women)
+                        weekend_selection = f"{sport_selection}, {gender_selection}"
                         team_total = []
                         team_names = []
                         calculator = 50000
-                        "---"
+
                         selection1 = st.selectbox("Select first member of team", Female_NoCo_athletes)
                         if selection1 != "None":
                             team_names.append(selection1)
@@ -890,7 +886,7 @@ if authentication_status:
                                 st.session_state.weekend_selection = weekend_selection
                                 db.insert_period(json_str, name, st.session_state.weekend_selection,
                                                  st.session_state.Team_names)
-                                st.success(f"Your Womens Nordic Combined Team for {weekend_selection} Has ben saved. Your total was: {sum(team_total)} dollars")
+                                st.success(f"Your Womens Nordic Combined Team has been saved. Your total was: {sum(team_total)} dollars")
                                 st_lottie(lottie_submitted, 1.5, False, False, "low", 50, 50)
 
     if selected == "Events":
