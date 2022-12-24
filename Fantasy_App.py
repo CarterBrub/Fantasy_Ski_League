@@ -203,6 +203,7 @@ if authentication_status:
             st.text("You will have 50,000 dollars per gender for your team. See the athlete prices on the athletes tab.")
             st.text("If you don't want to fill a slot, scroll to the bottom and select None.")
 
+
             sport_selection = st.selectbox("Which Sport", sports)
             if sport_selection == "Cross Country":
                 gender_selection = st.selectbox("Which gender", genders)
@@ -224,7 +225,7 @@ if authentication_status:
                     st.header("Team Selection Men XC")
                     with st.form("entry_form", clear_on_submit=False):
                         calculator = 50000
-                        weekend_selection = st.selectbox("Select weekend", weekends_XC)
+                        weekend_selection = f"{sport_selection}, {gender_selection}"
                         st.session_state['weekend_selection'] = weekend_selection
                         team_total = []
                         team_names = []
@@ -322,7 +323,7 @@ if authentication_status:
                                 st.session_state.weekend_selection = weekend_selection
                                 db.insert_period(json_str, name, st.session_state.weekend_selection,
                                                  st.session_state.Team_names)
-                                st.success(f"Your Mens XC Team for {weekend_selection} Has ben saved. Your sum was: {sum(team_total)} dollars")
+                                st.success(f"Your Mens XC Team has ben saved. Your sum was: {sum(team_total)} dollars")
                                 st_lottie(lottie_submitted, 1.5, False, False, "low", 50, 50)
                         # -----------------------------------------------------------------------------------
 
