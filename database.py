@@ -18,6 +18,10 @@ def insert_period(submission_date, user, weekend, Team):
     return db.put({"key": submission_date, "User": user, "Weekend": weekend, "Team": Team})
 
 
+def insert_overall(submission_date, Team):
+    return db.put({"key": submission_date, "Team": Team})
+
+
 def fetch_all_periods():
     res = db.fetch()
     return res.items
