@@ -452,7 +452,7 @@ if authentication_status:
                         Nationality_filter = df.loc[df['Nationality'] == f"{selection}"]
                         st.dataframe(Nationality_filter)
                     "---"
-                    st.header("Team Selection Men's Jumping")
+                    st.header("Team Selection Mens Jumping")
                     with st.form("entry_form", clear_on_submit=False):
                         weekend_selection = f"{sport_selection}, {gender_selection}"
                         team_total = []
@@ -569,7 +569,7 @@ if authentication_status:
                         team_total = []
                         team_names = []
                         calculator = 50000
-                        "---"
+
                         selection1 = st.selectbox("Select first member of team", Female_Jump_athletes)
                         if selection1 != "None":
                             team_names.append(selection1)
