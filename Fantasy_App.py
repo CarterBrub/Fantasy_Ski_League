@@ -1046,12 +1046,12 @@ if authentication_status:
             NoCo_Women_Overall = {NoCo_Women[i]: NoCo_Women_points[i] for i in range(len(NoCo_Women))}
 
             if button:
-                db.insert_overall(st.session_state.time, XC_Men_Overall)
-                db.insert_overall(st.session_state.time, XC_Women_Overall)
-                db.insert_overall(st.session_state.time, Jump_Men_Overall)
-                db.insert_overall(st.session_state.time, Jump_Women_Overall)
-                db.insert_overall(st.session_state.time, NoCo_Men_Overall)
-                db.insert_overall(st.session_state.time, NoCo_Women_Overall)
+                db.insert_overall(f"{st.session_state.time}", XC_Men_Overall)
+                db.insert_overall(f"{st.session_state.time}", XC_Women_Overall)
+                db.insert_overall(f"{st.session_state.time}", Jump_Men_Overall)
+                db.insert_overall(f"{st.session_state.time}", Jump_Women_Overall)
+                db.insert_overall(f"{st.session_state.time}", NoCo_Men_Overall)
+                db.insert_overall(f"{st.session_state.time}", NoCo_Women_Overall)
                 st.write("Points updated")
 
 
